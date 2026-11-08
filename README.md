@@ -8,7 +8,7 @@ Plain pages, no framework. The finished pages are in the repository, so the fold
 is: on **Cloudflare Pages** (project connected to this repository, branch `main`, no build command,
 output directory `/`), at skoor.it and www.skoor.it. Every push to `main` is published.
 
-The app itself is at **app.skoor.it** (Firebase Hosting, repository `Skoor-it/skoor-app`).
+The app itself is at **app.skoor.it** (the `alpha/` folder of `Skoor-it/skoor-app`, a second Cloudflare Pages project).
 `_redirects` sends `skoor.it/link` (the TV screens) and `skoor.it/dash` on to the app; `_headers`
 lets browsers keep the fonts and three.js.
 

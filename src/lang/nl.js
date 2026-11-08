@@ -64,7 +64,7 @@ export default {
   'how.1': 'Start een wedstrijd',
   'how.1text': 'Op je gsm of je horloge. Geen account nodig voor een snelle wedstrijd, en het werkt zonder internet.',
   'how.2': 'Eén tik per punt',
-  'how.2text': 'Tik, druk op je horloge of klik op een afstandsbediening. Je partner kan mee de score bijhouden: de eerste tik telt.',
+  'how.2text': 'Tik, druk op je horloge of klik op een afstandsbediening. Meerdere spelers kunnen samen de score en de klok bijhouden, elk op hun eigen gsm of horloge.',
   'how.3': 'Kijk terug',
   'how.3text': 'Elke wedstrijd wordt bewaard: wie je versloeg, met wie je het vaakst wint, hoe je niveau groeit.',
 

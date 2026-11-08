@@ -66,7 +66,7 @@ export default {
   'how.1': 'Start a game',
   'how.1text': 'On your phone or your watch. No account needed for a quick game, and it works without internet.',
   'how.2': 'One tap per point',
-  'how.2text': 'Tap, press your watch, or click a remote. Your partner can keep score with you: the first tap counts.',
+  'how.2text': 'Tap, press your watch, or click a remote. Several players can keep the score and the clock together, each on their own phone or watch.',
   'how.3': 'Look back',
   'how.3text': 'Every game is kept: who you beat, with whom you win most, how your level grows.',
 

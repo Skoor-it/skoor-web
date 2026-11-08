@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+[[head meta.subscribedTitle meta.subscribedDescription]]
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="skip" href="#main">{{nav.skip}}</a>
+<div class="page">
+  <nav aria-label="{{nav.label}}" class="topnav wrap">
+    <a href="{{@base}}" class="logo">SKOOR</a>
+    [[langswitch]]
+    <a href="{{@app}}" class="btn btn-s">{{nav.open}}</a>
+  </nav>
+  <main id="main" class="wrap sub-main">
+    <svg width="56" height="56" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#22c55e"/><path d="m7 12.5 3.3 3.3L17 9" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h1 class="h1 h1-sub">{{sub.title}}</h1>
+    <p class="sub sub-l">{{sub.text}}</p>
+    <div class="row">
+      <a href="{{@app}}" class="btn btn-m2">{{sub.start}}</a>
+      <a href="{{@base}}wish/" class="btn-ghost btn-m2">{{sub.wish}}</a>
+    </div>
+    <p class="note note-l">{{sub.friends}}</p>
+  </main>
+</div>
+</body>
+</html>

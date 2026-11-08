@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+[[head meta.homeTitle meta.homeDescription]]
+<script type="module" src="{{@root}}js/home.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">{{nav.skip}}</a>
+<div id="top" class="page">
+
+<header class="hero">
+  <canvas class="court" data-court aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <nav aria-label="{{nav.label}}" class="topnav wrap">
+      <a href="#top" class="logo">SKOOR</a>
+      <a href="#sports" class="navlink">{{nav.sports}}</a>
+      <a href="#clubs" class="navlink">{{nav.clubs}}</a>
+      <a href="#watches" class="navlink">{{nav.watches}}</a>
+      <a href="#get" class="navlink">{{nav.download}}</a>
+      [[langswitch]]
+      <a href="{{@app}}" class="btn btn-s">{{nav.open}}</a>
+    </nav>
+    <div id="main" class="hero-body wrap">
+      <div class="hero-words">
+        <span class="eyebrow">{{hero.eyebrow}}</span>
+        <h1 class="hero-title">{{hero.title}}</h1>
+        <p class="lead">{{hero.lead}}</p>
+        <div class="row">
+          <a href="{{@app}}" class="btn btn-l">{{hero.start}} [[icon arrow]]</a>
+          <a href="#clubs" class="btn-ghost btn-l">{{hero.clubs}}</a>
+        </div>
+        <span class="live"><span class="dot"></span><b data-num="liveNow">–</b> {{hero.liveNow}}</span>
+      </div>
+
+      <div class="try">
+        <div class="phone" data-try>
+          <div class="try-play" data-playing>
+            <div class="try-top"><span class="green try-mode"><span class="dot dot-s"></span>{{try.quick}}</span><span class="muted">{{try.to21}}</span></div>
+            <button type="button" class="try-side" data-point="0" aria-label="{{try.pointYou}}">
+              <span class="try-name" data-name="0">{{try.you}}</span>
+              <span class="tiles" data-tiles="0">[[tiles xl on 00]]</span>
+            </button>
+            <div class="try-line"></div>
+            <button type="button" class="try-side" data-point="1" aria-label="{{try.pointThem}}">
+              <span class="tiles" data-tiles="1">[[tiles xl off 00]]</span>
+              <span class="try-name" data-name="1">{{try.them}}</span>
+            </button>
+            <div class="try-foot">
+              <button type="button" class="btn-small" data-undo>{{try.undo}}</button>
+              <span class="muted small" data-hint></span>
+            </div>
+            <span class="sr" aria-live="polite" data-said></span>
+          </div>
+          <div class="try-won" data-won hidden>
+            <span class="label muted">{{try.game}}</span>
+            <span class="try-winner" data-winner></span>
+            <span class="try-final" data-final></span>
+            <span class="try-pitch">{{try.pitch}}</span>
+            <button type="button" class="btn btn-m" data-reset>{{try.again}}</button>
+          </div>
+        </div>
+        <span class="muted-2">{{try.label}}</span>
+      </div>
+    </div>
+    <span class="oncourt" aria-live="polite"><span class="dot dot-xs"></span>{{hero.onCourt}} <span data-scene></span></span>
+  </div>
+</header>
+
+<section aria-label="{{nums.label}}" class="block wrap block-first">
+  <div class="stats">
+    <div class="stat"><span class="stat-n" data-num="players">–</span><span class="stat-l">{{nums.players}}</span></div>
+    <div class="stat"><span class="stat-n" data-num="games">–</span><span class="stat-l">{{nums.games}}</span></div>
+    <div class="stat"><span class="stat-n" data-num="points">–</span><span class="stat-l">{{nums.points}}</span></div>
+    [[rating]]
+  </div>
+  <p class="note">{{nums.note}}</p>
+</section>
+
+<section id="sports" class="block wrap">
+  <div class="intro"><h2 class="h2">{{sports.title}}</h2><p class="sub">{{sports.text}}</p></div>
+  <div class="sports">
+    [[sport badminton]]
+    [[sport padel]]
+    [[sport tennis]]
+    [[sport tabletennis]]
+    [[sport squash]]
+    [[sport pickleball]]
+    [[sport beachvolleyball]]
+    [[sport basketball timed]]
+    [[sport football timed]]
+    <a href="{{@base}}wish/" class="sport sport-wish"><span class="sport-icon">[[icon plus]]</span><span class="sport-words"><span class="sport-name">{{sports.wish}}</span><span class="sport-rule green">{{sports.wishSub}}</span></span></a>
+  </div>
+</section>
+
+<section aria-label="{{how.label}}" class="block wrap">
+  <div class="steps">
+    <div class="step step-on"><span class="step-n">01</span><h3 class="h3">{{how.1}}</h3><p>{{how.1text}}</p></div>
+    <div class="step"><span class="step-n">02</span><h3 class="h3">{{how.2}}</h3><p>{{how.2text}}</p></div>
+    <div class="step"><span class="step-n">03</span><h3 class="h3">{{how.3}}</h3><p>{{how.3text}}</p></div>
+  </div>
+</section>
+
+<section id="watches" class="block wrap">
+  <div class="intro"><h2 class="h2">{{watch.title}}</h2><p class="sub">{{watch.text}}</p></div>
+  <div class="watches">
+    <figure>
+      <div class="watch" aria-hidden="true">
+        <span class="watch-live">{{watch.live}}</span>
+        <span class="watch-team green">JORIS &amp; ANN</span>
+        <span class="tiles">[[tiles s on 14]]</span>
+        <span class="watch-line"></span>
+        <span class="tiles">[[tiles s off 11]]</span>
+        <span class="watch-team">MATHIAS &amp; LIES</span>
+      </div>
+      <figcaption>{{watch.garmin}}</figcaption>
+    </figure>
+    <figure>
+      <div class="watch" aria-hidden="true">
+        <span class="watch-live">{{watch.liveQ2}}</span>
+        <span class="watch-clock">07:42</span>
+        <span class="watch-timed">
+          <span class="watch-col"><span class="watch-team">{{watch.home}}</span><span class="watch-n">48</span></span>
+          <span class="watch-col"><span class="watch-team">{{watch.away}}</span><span class="watch-n">45</span></span>
+        </span>
+      </div>
+      <figcaption>{{watch.wear}}</figcaption>
+    </figure>
+    <figure>
+      <div class="remote" aria-hidden="true"><span class="remote-big"></span><span class="remote-small"></span></div>
+      <figcaption>{{watch.remote}}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="clubs" class="block wrap">
+  <div class="intro"><h2 class="h2">{{clubs.title}}</h2><p class="sub">{{clubs.text}}</p></div>
+  <div class="clubs">
+    <ul class="ticks">
+      <li><span class="tick"></span><span><b>{{clubs.coming}}</b><span>{{clubs.comingText}}</span></span></li>
+      <li><span class="tick"></span><span><b>{{clubs.fair}}</b><span>{{clubs.fairText}}</span></span></li>
+      <li><span class="tick"></span><span><b>{{clubs.screens}}</b><span>{{clubs.screensText}}</span></span></li>
+      <li><span class="tick"></span><span><b>{{clubs.rankings}}</b><span>{{clubs.rankingsText}}</span></span></li>
+    </ul>
+    <figure class="tv-fig">
+      <div class="tv" aria-hidden="true">
+        <div class="tv-top"><span>{{clubs.tvClub}}</span><span class="green">{{clubs.tvLive}}</span></div>
+        <div class="tv-courts">
+          <div class="tv-court"><span class="tv-label">[[court 1]]</span><span class="tv-team green">JORIS &amp; ANN</span><span class="tiles">[[tiles m on 17]]</span><span class="tiles">[[tiles m off 15]]</span><span class="tv-team">TOM &amp; LIEN</span></div>
+          <span class="tv-sep"></span>
+          <div class="tv-court"><span class="tv-label">[[court 2]]</span><span class="tv-team">MATHIAS</span><span class="tiles">[[tiles m off 09]]</span><span class="tiles">[[tiles m on 11]]</span><span class="tv-team green">LENNART</span></div>
+          <span class="tv-sep"></span>
+          <div class="tv-court"><span class="tv-label">[[court 3]]</span><span class="tv-team green">KOEN &amp; LIES</span><span class="tiles">[[tiles m on 20]]</span><span class="tiles">[[tiles m off 18]]</span><span class="tv-team">SARA &amp; JAN</span></div>
+        </div>
+        <div class="tv-next">{{clubs.tvNext}}</div>
+      </div>
+      <figcaption>{{clubs.tvCaption}}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section aria-label="{{screens.label}}" class="block wrap">
+  <div class="intro"><h2 class="h2">{{screens.title}}</h2><p class="sub">{{screens.text}}</p></div>
+  <div class="screens">
+    <figure>
+      <div class="mock" aria-hidden="true">
+        <span class="watch-live">{{watch.live}}</span>
+        <div class="mock-score">
+          <span class="mock-team green">JORIS &amp; ANN</span>
+          <span class="tiles">[[tiles l on 14]]</span>
+          <span class="mock-line"></span>
+          <span class="tiles">[[tiles l off 11]]</span>
+          <span class="mock-team">TOM &amp; LIEN</span>
+        </div>
+      </div>
+      <figcaption>{{screens.score}}</figcaption>
+    </figure>
+    <figure>
+      <div class="mock" aria-hidden="true">
+        <span class="mock-title">{{screens.eveningTitle}}</span>
+        <span class="mock-sub">{{screens.eveningSub}}</span>
+        <div class="mock-list">
+          <div><span>Joris</span><span class="green">{{screens.coming}}</span></div>
+          <div><span>Ann</span><span class="green">{{screens.coming}}</span></div>
+          <div><span>Tom</span><span class="muted">{{screens.maybe}}</span></div>
+          <div><span>Lien</span><span class="orange">{{screens.late}}</span></div>
+          <div><span>Mathias</span><span class="green">{{screens.coming}}</span></div>
+        </div>
+        <span class="mock-btn">{{screens.make}}</span>
+      </div>
+      <figcaption>{{screens.evening}}</figcaption>
+    </figure>
+    <figure>
+      <div class="mock" aria-hidden="true">
+        <span class="mock-title">{{screens.season}}</span>
+        <div class="mock-pair"><div><b>38</b><span>{{screens.games}}</span></div><div><b>61%</b><span>{{screens.won}}</span></div></div>
+        <span class="mock-small">{{screens.perWeek}}</span>
+        <div class="bars"><span style="height:40%"></span><span style="height:55%"></span><span style="height:35%"></span><span style="height:70%"></span><span style="height:60%"></span><span class="bar-on" style="height:85%"></span><span style="height:50%"></span></div>
+        <div class="mock-card">{{screens.partner}}</div>
+      </div>
+      <figcaption>{{screens.stats}}</figcaption>
+    </figure>
+    <figure>
+      <div class="mock" aria-hidden="true">
+        <div class="mock-won">
+          <span class="label muted">{{screens.match}}</span>
+          <span class="mock-winners">{{screens.winners}}</span>
+          <span class="mock-result">2 – 1</span>
+          <span class="muted small">21–17 · 19–21 · 21–18</span>
+          <span class="mock-done">{{screens.done}}</span>
+        </div>
+      </div>
+      <figcaption>{{screens.matchWon}}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="get" class="block wrap block-last">
+  <div class="cta">
+    <h2 class="h2 h2-xl">{{get.title}}</h2>
+    <p class="sub">{{get.text}}</p>
+    <div class="stores">
+      <a href="{{@app}}" class="store store-on">[[icon globe]]<span><span class="store-small">{{get.browserSmall}}</span><b>{{get.browser}}</b></span></a>
+      [[store appStore phone get.appStoreSmall get.appStore]]
+      [[store googlePlay play get.playSmall get.play]]
+      [[store garmin watch get.watchSmall get.garmin]]
+      [[store wearOs watch get.watchSmall get.wear]]
+    </div>
+  </div>
+</section>
+
+<section id="news" aria-label="{{news.label}}" class="wrap block-news">
+  <div class="news">
+    <div class="news-words">
+      <span class="eyebrow">{{news.eyebrow}}</span>
+      <h2 class="h2 h2-m">{{news.title}}</h2>
+      <p class="sub sub-s">{{news.text}}</p>
+    </div>
+    <form class="news-form" data-news novalidate>
+      <div class="news-ask" data-news-ask>
+        <label for="nl-email" class="field-label">{{news.email}}</label>
+        <input id="nl-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="you@example.com" class="input">
+        <span class="field-label" id="nl-topics">{{news.topics}}</span>
+        <div class="chips" role="group" aria-labelledby="nl-topics">
+          <button type="button" class="chip" data-topic="news" aria-pressed="true">{{news.topicNews}}</button>
+          <button type="button" class="chip" data-topic="clubs" aria-pressed="false">{{news.topicClubs}}</button>
+          <button type="button" class="chip" data-topic="watch" aria-pressed="false">{{news.topicWatch}}</button>
+          <button type="button" class="chip" data-topic="sports" aria-pressed="false">{{news.topicSports}}</button>
+        </div>
+        <span class="field-label" id="nl-lang">{{news.language}}</span>
+        <div class="chips" role="group" aria-labelledby="nl-lang">
+          <button type="button" class="chip" data-mail-lang="en" aria-pressed="false">English</button>
+          <button type="button" class="chip" data-mail-lang="nl" aria-pressed="false">Nederlands</button>
+        </div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
+        <button type="submit" class="btn btn-l btn-start" data-news-send disabled>{{news.send}}</button>
+        <span class="why" data-news-why aria-live="polite"></span>
+      </div>
+      <div class="card" data-news-sent hidden>
+        <b class="card-title">{{news.sentTitle}}</b>
+        <span class="card-text" data-news-sent-text></span>
+        <button type="button" class="btn-ghost btn-m btn-start" data-news-again>{{news.again}}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+[[footer]]
+</div>
+<script type="application/json" id="strings">{{@strings}}</script>
+</body>
+</html>

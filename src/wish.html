@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+[[head meta.wishTitle meta.wishDescription]]
+<script type="module" src="{{@root}}js/wish.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">{{nav.skip}}</a>
+<div class="page">
+  <nav aria-label="{{nav.label}}" class="topnav wrap">
+    <a href="{{@base}}" class="logo">SKOOR</a>
+    <a href="{{@base}}#sports" class="navlink">{{nav.backToSports}}</a>
+    [[langswitch]]
+    <a href="{{@app}}" class="btn btn-s">{{nav.open}}</a>
+  </nav>
+  <main id="main" class="wrap wish-main">
+    <div class="wish-top">
+      <div class="wish-words">
+        <span class="eyebrow">{{wish.eyebrow}}</span>
+        <h1 class="h1">{{wish.title}}</h1>
+        <p class="sub wish-sub">{{wish.text}}</p>
+        <form class="wish-ask" data-wish novalidate>
+          <label for="sport" class="field-label">{{wish.label}}</label>
+          <div class="row row-10">
+            <input id="sport" name="sport" type="text" maxlength="40" autocomplete="off" placeholder="{{wish.placeholder}}" class="input input-grow">
+            <button type="submit" class="btn btn-l" data-wish-send disabled>{{wish.send}}</button>
+          </div>
+          <span class="why" data-wish-why aria-live="polite"></span>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
+        </form>
+        <div class="card wish-done" data-wish-done hidden>
+          [[icon check]]
+          <b class="card-title" data-wish-title tabindex="-1">{{wish.thanks}}</b>
+          <span class="card-text" data-wish-typed></span>
+          <span class="note" data-wish-note></span>
+          <form class="wish-mail" data-wish-mail novalidate>
+            <label for="notify" class="wish-mail-label">{{wish.notifyLabel}}</label>
+            <div class="row row-8">
+              <input id="notify" type="email" autocomplete="email" placeholder="you@example.com" class="input input-s input-grow">
+              <button type="submit" class="btn btn-m" data-wish-mail-send disabled>{{wish.notify}}</button>
+            </div>
+            <span class="why why-s" data-wish-mail-why aria-live="polite"></span>
+            <span class="why why-s">{{wish.notifyNote}}</span>
+          </form>
+          <span class="card-text wish-mail-done" data-wish-mail-done hidden></span>
+          <button type="button" class="btn-ghost btn-m btn-start" data-wish-again>{{wish.another}}</button>
+        </div>
+      </div>
+      <aside aria-label="{{wish.top}}" class="wish-list">
+        <span class="wish-list-title">{{wish.top}}</span>
+        <ol class="bars-list" data-wish-top></ol>
+        <span class="note">{{wish.topNote}}</span>
+      </aside>
+    </div>
+    <div class="wish-facts">
+      <div><b>{{wish.typos}}</b><span>{{wish.typosText}}</span></div>
+      <div><b>{{wish.names}}</b><span>{{wish.namesText}}</span></div>
+      <div><b>{{wish.noName}}</b><span>{{wish.noNameText}}</span></div>
+    </div>
+  </main>
+</div>
+<script type="application/json" id="strings">{{@strings}}</script>
+</body>
+</html>

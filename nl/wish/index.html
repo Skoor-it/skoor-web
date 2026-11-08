@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Built from src/wish.html by build.mjs: change that file and run npm run build. -->
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jouw sport staat er niet bij? · Skoor</title>
+<meta name="description" content="Laat weten welke sport Skoor als volgende moet tellen. De sporten die het meest gevraagd worden, leert Skoor eerst.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://skoor.it/nl/wish/">
+<link rel="alternate" hreflang="nl" href="https://skoor.it/nl/wish/">
+<link rel="alternate" hreflang="en" href="https://skoor.it/wish/">
+<meta property="og:title" content="Jouw sport staat er niet bij? · Skoor">
+<meta property="og:description" content="Laat weten welke sport Skoor als volgende moet tellen. De sporten die het meest gevraagd worden, leert Skoor eerst.">
+<meta property="og:url" content="https://skoor.it/nl/wish/">
+<meta property="og:image" content="https://skoor.it/icons/skoor-512.png">
+<link rel="icon" href="../../icons/skoor-favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../icons/skoor-favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../icons/skoor-apple-180.png">
+<link rel="preload" href="../../fonts/barlow-condensed-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<script type="module" src="../../js/wish.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Naar de inhoud</a>
+<div class="page">
+  <nav aria-label="Hoofdmenu" class="topnav wrap">
+    <a href="../../nl/" class="logo">SKOOR</a>
+    <a href="../../nl/#sports" class="navlink">Terug naar de sporten</a>
+    <a href="../../wish/" class="langlink" hreflang="en" lang="en" aria-label="English"><span class="lang-on">NL</span>&nbsp;·&nbsp;EN</a>
+    <a href="https://badminton-dev-bc258.web.app/" class="btn btn-s">Open Skoor</a>
+  </nav>
+  <main id="main" class="wrap wish-main">
+    <div class="wish-top">
+      <div class="wish-words">
+        <span class="eyebrow">Jouw sport staat er niet bij?</span>
+        <h1 class="h1">Welke sport moet Skoor als volgende tellen?</h1>
+        <p class="sub wish-sub">Typ één sport. We tellen elke wens, en de sporten die het meest gevraagd worden, leert Skoor eerst.</p>
+        <form class="wish-ask" data-wish novalidate>
+          <label for="sport" class="field-label">Sport</label>
+          <div class="row row-10">
+            <input id="sport" name="sport" type="text" maxlength="40" autocomplete="off" placeholder="bv. Korfbal" class="input input-grow">
+            <button type="submit" class="btn btn-l" data-wish-send disabled>Stuur mijn wens</button>
+          </div>
+          <span class="why" data-wish-why aria-live="polite"></span>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
+        </form>
+        <div class="card wish-done" data-wish-done hidden>
+          <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="#22c55e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <b class="card-title" data-wish-title tabindex="-1">Bedankt, je wens is geteld!</b>
+          <span class="card-text" data-wish-typed></span>
+          <span class="note" data-wish-note></span>
+          <form class="wish-mail" data-wish-mail novalidate>
+            <label for="notify" class="wish-mail-label">Mail me als <span data-label></span> erbij komt <span class="muted">(niet verplicht)</span></label>
+            <div class="row row-8">
+              <input id="notify" type="email" autocomplete="email" placeholder="you@example.com" class="input input-s input-grow">
+              <button type="submit" class="btn btn-m" data-wish-mail-send disabled>Mail me</button>
+            </div>
+            <span class="why why-s" data-wish-mail-why aria-live="polite"></span>
+            <span class="why why-s">Eén mail als hij in Skoor zit, verder niets. Je bevestigt eerst het adres.</span>
+          </form>
+          <span class="card-text wish-mail-done" data-wish-mail-done hidden></span>
+          <button type="button" class="btn-ghost btn-m btn-start" data-wish-again>Nog een sport wensen</button>
+        </div>
+      </div>
+      <aside aria-label="Nu het meest gewenst" class="wish-list">
+        <span class="wish-list-title">Nu het meest gewenst</span>
+        <ol class="bars-list" data-wish-top></ol>
+        <span class="note">Laatste 30 dagen, alle landen. Elk uur bijgewerkt.</span>
+      </aside>
+    </div>
+    <div class="wish-facts">
+      <div><b>Tikfouten mogen</b><span>“Badmington” of “korfbll”: Skoor weet wat je bedoelt.</span></div>
+      <div><b>Elke naam telt</b><span>Soccer, football, voetbal: één sport. American football blijft apart.</span></div>
+      <div><b>Geen naam nodig</b><span>We bewaren de sport en je regio (uit je tijdzone). Verder niets.</span></div>
+    </div>
+  </main>
+</div>
+<script type="application/json" id="strings">{"js.hint1":"Wie eerst 21 heeft, wint","js.hint2":"Groen serveert","js.hint3":"Wie de rally wint, serveert","js.youWin":"JIJ WINT","js.theyWin":"ZIJ WINNEN","js.scoreSaid":"Jij {a}, zij {b}","js.court.badminton":"Badminton","js.court.padel":"Padel","js.court.tennis":"Tennis","js.court.tabletennis":"Tafeltennis","js.court.squash":"Squash","js.court.pickleball":"Pickleball","js.court.beachvolleyball":"Beachvolleybal","js.court.basketball":"Basketbal","js.court.football":"Voetbal","js.news.typeEmail":"Vul eerst je e-mailadres in.","js.news.pickTopic":"Kies minstens één onderwerp.","js.news.ready":"Je krijgt eerst een link om te bevestigen. Elke mail heeft een link om je met één klik uit te schrijven. We geven je adres nooit door.","js.news.soon":"De mailinglijst gaat binnenkort open. Tot dan staat deze knop uit.","js.news.sending":"Bezig met versturen…","js.news.failed":"Dat lukte niet. Kijk je internetverbinding na en probeer opnieuw.","js.news.sentText":"We stuurden een link naar \u003cb data-email>\u003c/b>. Tik erop om te bevestigen, en je staat op de lijst. Na een paar minuten nog geen link? Kijk in je spam.","js.wish.ready":"We bewaren alleen de sport en je regio, geen naam.","js.wish.typeFirst":"Typ eerst de naam van een sport (minstens 2 letters).","js.wish.sending":"Bezig met versturen…","js.wish.typed":"Je typte “{typed}”. Geteld voor: \u003cb>{label}\u003c/b>.","js.wish.known":"Goed nieuws: Skoor telt hem al. Open Skoor om een wedstrijd te starten.","js.wish.next":"De meest gewenste sporten komen eerst. Vraag je ploegmaats om ook te wensen.","js.wish.again":"Je wenste \u003cb>{label}\u003c/b> al in de laatste 30 dagen: één wens per sport telt.","js.wish.invalid":"Gebruik alleen de naam van de sport: letters, 2 tot 40, geen links.","js.wish.limit":"Dat zijn veel wensen vanaf deze verbinding vandaag. Probeer morgen opnieuw.","js.wish.busy":"Skoor is nu erg druk. Probeer over een uur opnieuw.","js.wish.failed":"Dat lukte niet. Kijk je internetverbinding na en probeer opnieuw.","js.wish.mailSoon":"Mails bij een nieuwe sport komen binnenkort, samen met de mailinglijst. Tot dan staat deze knop uit.","js.wish.mailType":"Vul eerst je e-mailadres in.","js.wish.mailDone":"Kijk in je mailbox: tik op de link die we stuurden om te bevestigen.","js.wish.count":{"one":"{n} wens","other":"{n} wensen"},"js.wish.none":"Nog geen wensen. Wees de eerste!","js.wish.topFailed":"De lijst kan nu niet geladen worden."}</script>
+</body>
+</html>

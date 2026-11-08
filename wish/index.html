@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Built from src/wish.html by build.mjs: change that file and run npm run build. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your sport isn’t here? · Skoor</title>
+<meta name="description" content="Tell us which sport Skoor should count next. The sports asked for most are the next ones Skoor learns.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://skoor.it/wish/">
+<link rel="alternate" hreflang="en" href="https://skoor.it/wish/">
+<link rel="alternate" hreflang="nl" href="https://skoor.it/nl/wish/">
+<meta property="og:title" content="Your sport isn’t here? · Skoor">
+<meta property="og:description" content="Tell us which sport Skoor should count next. The sports asked for most are the next ones Skoor learns.">
+<meta property="og:url" content="https://skoor.it/wish/">
+<meta property="og:image" content="https://skoor.it/icons/skoor-512.png">
+<link rel="icon" href="../icons/skoor-favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../icons/skoor-favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../icons/skoor-apple-180.png">
+<link rel="preload" href="../fonts/barlow-condensed-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+<script type="module" src="../js/wish.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="page">
+  <nav aria-label="Main" class="topnav wrap">
+    <a href="../" class="logo">SKOOR</a>
+    <a href="../#sports" class="navlink">Back to the sports</a>
+    <a href="../nl/wish/" class="langlink" hreflang="nl" lang="nl" aria-label="Nederlands"><span class="lang-on">EN</span>&nbsp;·&nbsp;NL</a>
+    <a href="https://badminton-dev-bc258.web.app/" class="btn btn-s">Open Skoor</a>
+  </nav>
+  <main id="main" class="wrap wish-main">
+    <div class="wish-top">
+      <div class="wish-words">
+        <span class="eyebrow">Your sport isn’t here?</span>
+        <h1 class="h1">Which sport should Skoor count next?</h1>
+        <p class="sub wish-sub">Type one sport. We count every wish, and the sports asked for most are the next ones Skoor learns.</p>
+        <form class="wish-ask" data-wish novalidate>
+          <label for="sport" class="field-label">Sport</label>
+          <div class="row row-10">
+            <input id="sport" name="sport" type="text" maxlength="40" autocomplete="off" placeholder="e.g. Korfball" class="input input-grow">
+            <button type="submit" class="btn btn-l" data-wish-send disabled>Send my wish</button>
+          </div>
+          <span class="why" data-wish-why aria-live="polite"></span>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
+        </form>
+        <div class="card wish-done" data-wish-done hidden>
+          <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="#22c55e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <b class="card-title" data-wish-title tabindex="-1">Thanks, your wish is counted!</b>
+          <span class="card-text" data-wish-typed></span>
+          <span class="note" data-wish-note></span>
+          <form class="wish-mail" data-wish-mail novalidate>
+            <label for="notify" class="wish-mail-label">Email me when <span data-label></span> is added <span class="muted">(optional)</span></label>
+            <div class="row row-8">
+              <input id="notify" type="email" autocomplete="email" placeholder="you@example.com" class="input input-s input-grow">
+              <button type="submit" class="btn btn-m" data-wish-mail-send disabled>Email me</button>
+            </div>
+            <span class="why why-s" data-wish-mail-why aria-live="polite"></span>
+            <span class="why why-s">One email when it’s in Skoor, nothing else. You confirm the address first.</span>
+          </form>
+          <span class="card-text wish-mail-done" data-wish-mail-done hidden></span>
+          <button type="button" class="btn-ghost btn-m btn-start" data-wish-again>Wish another sport</button>
+        </div>
+      </div>
+      <aside aria-label="Most wished right now" class="wish-list">
+        <span class="wish-list-title">Most wished right now</span>
+        <ol class="bars-list" data-wish-top></ol>
+        <span class="note">Last 30 days, all countries. Updated every hour.</span>
+      </aside>
+    </div>
+    <div class="wish-facts">
+      <div><b>Typos are fine</b><span>“Badmington” or “korfbll”: Skoor knows what you mean.</span></div>
+      <div><b>Every name counts</b><span>Soccer, football, voetbal: one sport. American football stays apart.</span></div>
+      <div><b>No name needed</b><span>We keep the sport and your region (from your time zone). Nothing else.</span></div>
+    </div>
+  </main>
+</div>
+<script type="application/json" id="strings">{"js.hint1":"First to 21 wins","js.hint2":"Green serves","js.hint3":"The side that wins the rally serves","js.youWin":"YOU WIN","js.theyWin":"THEY WIN","js.scoreSaid":"You {a}, them {b}","js.court.badminton":"Badminton","js.court.padel":"Padel","js.court.tennis":"Tennis","js.court.tabletennis":"Table tennis","js.court.squash":"Squash","js.court.pickleball":"Pickleball","js.court.beachvolleyball":"Beach volleyball","js.court.basketball":"Basketball","js.court.football":"Football","js.news.typeEmail":"Type your email address first.","js.news.pickTopic":"Choose at least one topic.","js.news.ready":"You get a link to confirm first. Every email has a one-click unsubscribe. We never share your address.","js.news.soon":"The mailing list opens soon. Until then, this button stays off.","js.news.sending":"Sending…","js.news.failed":"That didn’t work. Check your internet connection and try again.","js.news.sentText":"We sent a link to \u003cb data-email>\u003c/b>. Tap it to confirm, and you’re on the list. No link within a few minutes? Look in your spam folder.","js.wish.ready":"We only keep the sport and your region, no name.","js.wish.typeFirst":"Type the name of a sport first (at least 2 letters).","js.wish.sending":"Sending…","js.wish.typed":"You typed “{typed}”. Counted for: \u003cb>{label}\u003c/b>.","js.wish.known":"Good news: Skoor already counts it. Open Skoor to start a game.","js.wish.next":"The most wished sports come next. Tell your teammates to wish too.","js.wish.again":"You already wished for \u003cb>{label}\u003c/b> in the last 30 days: one wish per sport counts.","js.wish.invalid":"Use only the name of the sport: letters, 2 to 40 of them, no links.","js.wish.limit":"That’s a lot of wishes from this connection today. Try again tomorrow.","js.wish.busy":"Skoor is very busy right now. Try again in an hour.","js.wish.failed":"That didn’t work. Check your internet connection and try again.","js.wish.mailSoon":"Email alerts open soon, together with the mailing list. Until then, this button stays off.","js.wish.mailType":"Type your email address first.","js.wish.mailDone":"Check your inbox: tap the link we sent to confirm.","js.wish.count":{"one":"{n} wish","other":"{n} wishes"},"js.wish.none":"No wishes yet. Be the first!","js.wish.topFailed":"The list can’t be loaded right now."}</script>
+</body>
+</html>

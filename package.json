@@ -1,0 +1,12 @@
+{
+  "name": "skoor-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The website skoor.it",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.js",
+    "start": "python3 -m http.server 8090"
+  }
+}

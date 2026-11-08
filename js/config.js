@@ -19,6 +19,7 @@ export const STORES = {
   googlePlay: null,
   garmin: null,
   wearOs: null,
+  appleWatch: null,
 };
 
 // The stores' rating, once there are reviews: { rating: '4.8', reviews: 120 }. While null, the

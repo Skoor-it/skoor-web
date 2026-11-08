@@ -24,7 +24,7 @@ export default {
   'hero.title': 'Play it.<br><span class="green">Skoor it.</span>',
   'hero.lead': 'The score of every point, with one tap: from your phone, your watch or a remote in your pocket. Clubs run their whole evening with it: who’s coming, who plays next, the score on the screen in the hall.',
   'hero.start': 'Start a game, free',
-  'hero.clubs': 'For clubs',
+  'hero.clubs': 'For clubs and organisers',
   'hero.liveNow': 'games being played right now',
   'hero.onCourt': 'Now on court:',
 
@@ -80,7 +80,7 @@ export default {
   'watch.remote': 'A camera remote or earbuds',
 
   'clubs.title': 'Club evening, sorted.',
-  'clubs.text': 'Everyone says if they come. Skoor makes fair matches, sends people to free courts, and shows every score on the TV in the hall. At the end of the night, the statistics are already there.',
+  'clubs.text': 'For club evenings, tournaments and sports days. Everyone says if they come. Skoor makes fair matches, sends people to free courts, and shows every score on the TV in the hall. At the end of the night, the statistics are already there.',
   'clubs.coming': 'Who is coming',
   'clubs.comingText': 'A reminder the day before; yes, no or maybe with one tap.',
   'clubs.fair': 'Fair rotation',
@@ -128,6 +128,7 @@ export default {
   'get.watchSmall': 'For your watch',
   'get.garmin': 'Garmin Connect IQ',
   'get.wear': 'Wear OS',
+  'get.appleWatch': 'Apple Watch',
   'get.soon': 'Coming soon',
 
   'news.label': 'Stay in the game',

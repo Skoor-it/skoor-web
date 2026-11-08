@@ -22,7 +22,7 @@ export default {
   'hero.title': 'Play it.<br><span class="green">Skoor it.</span>',
   'hero.lead': 'De score van elk punt, met één tik: op je gsm, je horloge of een afstandsbediening in je zak. Clubs regelen er hun hele avond mee: wie komt, wie speelt er nu, de score op het scherm in de zaal.',
   'hero.start': 'Start een wedstrijd, gratis',
-  'hero.clubs': 'Voor clubs',
+  'hero.clubs': 'Voor clubs en organisatoren',
   'hero.liveNow': 'wedstrijden worden nu gespeeld',
   'hero.onCourt': 'Nu op het veld:',
 
@@ -78,7 +78,7 @@ export default {
   'watch.remote': 'Een camera-afstandsbediening of oortjes',
 
   'clubs.title': 'Clubavond, geregeld.',
-  'clubs.text': 'Iedereen laat weten of hij komt. Skoor maakt eerlijke wedstrijden, stuurt mensen naar vrije velden en toont elke score op de tv in de zaal. Op het einde van de avond staan de statistieken al klaar.',
+  'clubs.text': 'Voor clubavonden, toernooien en sportdagen. Iedereen laat weten of hij komt. Skoor maakt eerlijke wedstrijden, stuurt mensen naar vrije velden en toont elke score op de tv in de zaal. Op het einde van de avond staan de statistieken al klaar.',
   'clubs.coming': 'Wie komt er',
   'clubs.comingText': 'Een herinnering de dag ervoor; ja, nee of misschien met één tik.',
   'clubs.fair': 'Eerlijke rotatie',
@@ -126,6 +126,7 @@ export default {
   'get.watchSmall': 'Voor je horloge',
   'get.garmin': 'Garmin Connect IQ',
   'get.wear': 'Wear OS',
+  'get.appleWatch': 'Apple Watch',
   'get.soon': 'Binnenkort',
 
   'news.label': 'Blijf in het spel',

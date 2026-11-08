@@ -3,7 +3,7 @@
 // hit. three.js draws it. With "reduce motion" on, one still picture is drawn.
 import * as T from './vendor/three.module.min.js';
 
-export const SCENES = ['badminton', 'padel', 'tennis', 'tabletennis', 'squash', 'pickleball', 'beachvolleyball', 'basketball', 'football'];
+export const SCENES = ['badminton', 'padel', 'tennis', 'tabletennis', 'squash', 'pickleball', 'beachvolleyball', 'volleyball', 'basketball', 'handball', 'rugby', 'football'];
 
 export function startCourt(el, id) {
   let renderer;
@@ -102,6 +102,9 @@ export function startCourt(el, id) {
     beachvolleyball: { L: 16, W: 8, floor: 0x2a2114, cam: [20, 8.5, 1.6], ball: 0xf5f0d8, r: 0.11, trail: 0.15,
       build() { rect(-4, -8, 4, 8); net(8.5, 2.43, 1.43, 0.15); },
       volley: true },
+    volleyball: { L: 18, W: 9, floor: 0x1a120a, cam: [21, 9, 1.8], ball: 0xf5e7b0, r: 0.105, trail: 0.15,
+      build() { rect(-4.5, -9, 4.5, 9); seg(-4.5, 3, 4.5, 3); seg(-4.5, -3, 4.5, -3); net(9.5, 2.43, 1.43, 0.15); },
+      volley: true },
     basketball: { L: 28, W: 15, floor: 0x1d140b, cam: [31, 13, 2], ball: 0xe06a1b, r: 0.12, trail: 0.16,
       build() {
         rect(-7.5, -14, 7.5, 14); seg(-7.5, 0, 7.5, 0); arc(0, 0, 1.8, 0, Math.PI * 2);
@@ -119,6 +122,41 @@ export function startCourt(el, id) {
         });
       },
       hoops: true },
+    handball: { L: 40, W: 20, floor: 0x0f1626, cam: [40, 17, 1.2], ball: 0xe8d36a, r: 0.095, trail: 0.2,
+      build() {
+        rect(-10, -20, 10, 20); seg(-10, 0, 10, 0);
+        [-1, 1].forEach((s) => {
+          const z = s * 20;
+          // the goal area (6 m) and the free-throw line (9 m, dashed): quarter circles from each post and a line between
+          [6, 9].forEach((r) => {
+            const n = r === 9 ? 24 : 40;
+            [-1, 1].forEach((side) => {
+              for (let i = 0; i < n; i += 1) {
+                if (r === 9 && i % 2) continue;
+                const a0 = Math.PI / 2 * i / n, a1 = Math.PI / 2 * (i + 1) / n;
+                seg(side * (1.5 + r * Math.sin(a0)), z - s * r * Math.cos(a0), side * (1.5 + r * Math.sin(a1)), z - s * r * Math.cos(a1));
+              }
+            });
+            if (r === 6) seg(-1.5, z - s * 6, 1.5, z - s * 6);
+            else for (let x = -1.5; x < 1.5; x += 0.6) seg(x, z - s * 9, Math.min(1.5, x + 0.3), z - s * 9);
+          });
+          up(-1.5, 0, z, -1.5, 2, z); up(1.5, 0, z, 1.5, 2, z); up(-1.5, 2, z, 1.5, 2, z);
+          up(-1.5, 2, z, -1.5, 0, z + s); up(1.5, 2, z, 1.5, 0, z + s); up(-1.5, 0, z + s, 1.5, 0, z + s);
+          for (let x = -1.5; x <= 1.51; x += 0.5) up(x, 2, z, x, 0, z + s);
+        });
+      },
+      pitch: { goalZ: 19.9, goalW: 1.3, goalH: [0.3, 1.8], xr: 9, zr: 17, speed: 14, loftH: [3, 5], shot: 0.25, back: [4, 12], backX: 8 } },
+    rugby: { L: 120, W: 70, floor: 0x0c1a0c, cam: [104, 46, 0], ball: 'oval', r: 0.45, trail: 0.7,
+      build() {
+        rect(-35, -60, 35, 60); seg(-35, 0, 35, 0);
+        [-1, 1].forEach((s) => {
+          seg(-35, s * 50, 35, s * 50); seg(-35, s * 28, 35, s * 28);                          // try line, 22 m line
+          for (let x = -35; x < 35; x += 4) seg(x, s * 10, x + 2, s * 10);                      // 10 m line, dashed
+          const z = s * 50;                                                                     // the H: posts 5.6 m apart, bar at 3 m
+          up(-2.8, 0, z, -2.8, 13, z); up(2.8, 0, z, 2.8, 13, z); up(-2.8, 3, z, 2.8, 3, z);
+        });
+      },
+      pitch: { goalZ: 50, posts: true, xr: 32, zr: 46, speed: 18, loftH: [9, 16], shot: 0.1, back: [15, 40], backX: 25 } },
     football: { L: 105, W: 68, floor: 0x0a1a0e, cam: [92, 40, 0], ball: 0xffffff, r: 0.4, trail: 0.7,
       build() {
         rect(-34, -52.5, 34, 52.5); seg(-34, 0, 34, 0); arc(0, 0, 9.15, 0, Math.PI * 2);
@@ -154,6 +192,10 @@ export function startCourt(el, id) {
     const cork = new T.Mesh(new T.SphereGeometry(0.06, 12, 12), basic(0xffffff));
     cork.position.y = -0.06;
     ball.add(skirt, cork);
+  } else if (sp.ball === 'oval') {
+    const oval = new T.Mesh(new T.SphereGeometry(sp.r * 1.6, 16, 16), basic(0xf0e6d0));
+    oval.scale.set(1, 1, 1.7);
+    ball.add(oval);
   } else {
     ball.add(new T.Mesh(new T.SphereGeometry(sp.r * 1.6, 16, 16), basic(sp.ball)));
   }
@@ -209,13 +251,17 @@ export function startCourt(el, id) {
       fly(V(rnd(-0.3, 0.3), sp.r, hz + s * 0.3), 3.2, 0.45);
       fly(V(rnd(-6, 6), 2.2, s * rnd(4, 9)), rnd(2.6, 3.4), 1.0);
     } else if (sp.pitch) {
-      // Passes along the grass, sometimes a long ball, now and then a shot at goal.
-      const goal = Math.random() < 0.12;
-      const to = goal ? V(rnd(-3, 3), rnd(0.3, 2.2), s * 52.4) : V(rnd(-30, 30), sp.r, rnd(-45, 45));
+      // Passes along the ground, sometimes a long ball, now and then a shot at goal (rugby: a kick
+      // between the posts). Football's numbers are the defaults.
+      const P = sp.pitch === true ? {} : sp.pitch;
+      const gz = P.goalZ ?? 52.4, gw = P.goalW ?? 3, gh = P.goalH ?? [0.3, 2.2], lh = P.loftH ?? [8, 14], sp0 = P.speed ?? 17;
+      const goal = Math.random() < (P.shot ?? 0.12);
+      const to = goal ? (P.posts ? V(rnd(-2.4, 2.4), rnd(4, 9), s * gz) : V(rnd(-gw, gw), rnd(gh[0], gh[1]), s * gz))
+        : V(rnd(-(P.xr ?? 30), P.xr ?? 30), sp.r, rnd(-(P.zr ?? 45), P.zr ?? 45));
       const far = at.distanceTo(to);
       const lofted = !goal && Math.random() < 0.3;
-      fly(to, goal ? rnd(1.5, 3) : lofted ? rnd(8, 14) : sp.r, goal ? 0.9 : Math.max(0.8, far / (lofted ? 22 : 17)));
-      if (goal) fly(V(rnd(-20, 20), sp.r, s * rnd(10, 30)), 10, 2);
+      fly(to, goal ? (P.posts ? rnd(12, 18) : rnd(1.5, 3)) : lofted ? rnd(lh[0], lh[1]) : sp.r, goal ? (P.posts ? 1.6 : 0.9) : Math.max(0.8, far / (lofted ? sp0 * 1.3 : sp0)));
+      if (goal) { const b = P.back ?? [10, 30], bx = P.backX ?? 20; fly(V(rnd(-bx, bx), sp.r, s * rnd(b[0], b[1])), P.posts ? 8 : 10, 2); }
     } else {
       // Badminton: clears and drops, now and then a smash.
       const smash = Math.random() < 0.3;
@@ -259,6 +305,7 @@ export function startCourt(el, id) {
     ball.position.copy(p);
     const dir = q.clone().sub(p);
     if (sp.ball === 'shuttle' && dir.lengthSq() > 1e-8) ball.quaternion.setFromUnitVectors(V(0, -1, 0), dir.normalize());
+    if (sp.ball === 'oval' && dir.lengthSq() > 1e-8) ball.quaternion.setFromUnitVectors(V(0, 0, 1), dir.normalize());
     trail.copyWithin(3, 0, (N - 1) * 3);
     trail[0] = p.x; trail[1] = p.y; trail[2] = p.z;
     if (!filled) { for (let i = 1; i < N; i += 1) { trail[i * 3] = p.x; trail[i * 3 + 1] = p.y; trail[i * 3 + 2] = p.z; } filled = true; }

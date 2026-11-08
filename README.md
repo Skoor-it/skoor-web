@@ -30,6 +30,8 @@ are up to date). `npm start` serves the site at http://localhost:8090.
 
 ## Where the data comes from
 
+- **Server address**: everything goes to `api.skoor.it` (a Cloudflare Worker in front of the Skoor
+  server functions, see `cloudflare/api-worker.js` in `Skoor-it/skoor-app`).
 - **Live numbers and "Most wished right now"**: `siteNumbers` in the Skoor app's server
   (`Skoor-it/skoor-app`, `functions/site.js`). Totals only, counted once an hour.
 - **Sport wishes**: `sportWish` (`functions/sportwish.js`), the same as in the app.

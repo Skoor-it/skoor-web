@@ -5,7 +5,7 @@
 export const APP_URL = 'https://app.skoor.it/';
 
 // The Skoor servers (skoor-app, functions/).
-const FUNCTIONS = 'https://europe-west1-badminton-dev-bc258.cloudfunctions.net';
+const FUNCTIONS = 'https://api.skoor.it';
 export const WISH_URL = `${FUNCTIONS}/sportWish`;
 export const NUMBERS_URL = `${FUNCTIONS}/siteNumbers`;
 

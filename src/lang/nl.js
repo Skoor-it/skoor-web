@@ -19,7 +19,6 @@ export default {
   'nav.backToSports': 'Terug naar de sporten',
   'nav.otherLang': 'English',
 
-  'hero.eyebrow': 'Badminton · padel · tennis · en meer',
   'hero.title': 'Play it.<br><span class="green">Skoor it.</span>',
   'hero.lead': 'De score van elk punt, met één tik: op je gsm, je horloge of een afstandsbediening in je zak. Clubs regelen er hun hele avond mee: wie komt, wie speelt er nu, de score op het scherm in de zaal.',
   'hero.start': 'Start een wedstrijd, gratis',

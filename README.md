@@ -7,6 +7,8 @@ The website of Skoor (*Play it. Skoor it.*), built from boards 58–64 of the de
 Plain pages, no framework. The finished pages are in the repository, so the folder is served as it
 is: on **Cloudflare Pages** (project connected to this repository, branch `main`, no build command,
 output directory `/`), at skoor.it and www.skoor.it. Every push to `main` is published.
+In Cloudflare the project's **production branch** must be `main` (Settings → Builds → Branch control);
+other branches only get preview addresses.
 
 The app itself is at **app.skoor.it** (the `alpha/` folder of `Skoor-it/skoor-app`, published by a Cloudflare Worker).
 `_redirects` sends `skoor.it/link` (the TV screens) and `skoor.it/dash` on to the app; `_headers`

@@ -137,6 +137,8 @@ button { font: inherit; }
 .sports { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
 .sport { display: flex; align-items: center; gap: 16px; padding: 22px; border-radius: 22px; background: var(--card); border: 1px solid var(--line); }
 .sport-icon { flex: none; width: 52px; height: 52px; border-radius: 16px; background: var(--tile); display: grid; place-items: center; color: var(--ink); }
+/* An icon from the server (js/home.js): its shape, in the text colour. */
+.sport-img { width: 28px; height: 28px; background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
 .sport-words { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .sport-name { font-family: var(--title); font-weight: 800; font-size: 26px; text-transform: uppercase; letter-spacing: .03em; line-height: 1; }
 .sport-rule { font-size: 14px; color: var(--text-4); display: flex; align-items: center; gap: 6px; }

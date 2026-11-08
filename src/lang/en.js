@@ -58,6 +58,9 @@ export default {
   'sports.beachvolleyball': 'Beach volleyball',
   'sports.basketball': 'Basketball',
   'sports.football': 'Football',
+  'sports.volleyball': 'Volleyball',
+  'sports.handball': 'Handball',
+  'sports.rugby': 'Rugby',
   'sports.wish': 'Your sport isn’t here?',
   'sports.wishSub': 'Wish for it: the most wished come next',
 

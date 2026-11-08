@@ -56,6 +56,9 @@ export default {
   'sports.beachvolleyball': 'Beachvolleybal',
   'sports.basketball': 'Basketbal',
   'sports.football': 'Voetbal',
+  'sports.volleyball': 'Volleybal',
+  'sports.handball': 'Handbal',
+  'sports.rugby': 'Rugby',
   'sports.wish': 'Jouw sport staat er niet bij?',
   'sports.wishSub': 'Wens hem: de meest gewenste komen eerst',
 

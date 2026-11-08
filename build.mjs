@@ -49,6 +49,9 @@ const SPORT_ICONS = {
   beachvolleyball: '<g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M11.1 7.1a16.55 16.55 0 0 1 10.9 4M12 12a12.6 12.6 0 0 1-8.7 5M16.8 13.6a16.55 16.55 0 0 1-9 7.5M20.7 17a12.8 12.8 0 0 0-8.7-5 13.3 13.3 0 0 1 0-10M6.3 3.8a16.55 16.55 0 0 0 1.9 11.5"/></g>',
   basketball: '<g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5v19M5.2 5.3a12 12 0 0 1 0 13.4M18.8 5.3a12 12 0 0 0 0 13.4"/></g>',
   football: '<g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m12 7.5 4 2.9-1.5 4.7h-5L8 10.4z"/><path d="M12 7.5V2.6M16 10.4l4.6-1.5M14.5 15.1l2.9 3.9M9.5 15.1l-2.9 3.9M8 10.4 3.4 8.9"/></g>',
+  volleyball: '<g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M11.1 7.1a16.55 16.55 0 0 1 10.9 4M12 12a12.6 12.6 0 0 1-8.7 5M16.8 13.6a16.55 16.55 0 0 1-9 7.5M20.7 17a12.8 12.8 0 0 0-8.7-5 13.3 13.3 0 0 1 0-10M6.3 3.8a16.55 16.55 0 0 0 1.9 11.5"/></g>',
+  handball: '<g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m13 21 3.5-2-4.5-4 2-4.5"/><path d="m5 7 4 3 5 .5 4 2.5 2.5 3M4 20l5-1 1.5-2m2.507-9a2 2 0 1 0 4 0 2 2 0 1 0-4 0m-7-4.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0-3 0"/></g>',
+  rugby: '<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9.5" ry="5.75" transform="rotate(-40 12 12)"/><path d="m8.5 15.5 7-7M10 12l2 2m-.5-3.5 2 2m-3-.5 2 2"/></g>',
 };
 
 export const PIECES = {
@@ -87,7 +90,7 @@ export const PIECES = {
   },
   // Only the sport's name: how many points or minutes is chosen when a game starts, so no rule here.
   sport(c, id) {
-    return `<div class="sport"><span class="sport-icon"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">${SPORT_ICONS[id]}</svg></span><span class="sport-words"><span class="sport-name">${c.t(`sports.${id}`)}</span></span></div>`;
+    return `<div class="sport" data-sport="${id}"><span class="sport-icon"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">${SPORT_ICONS[id]}</svg></span><span class="sport-words"><span class="sport-name">${c.t(`sports.${id}`)}</span></span></div>`;
   },
   icon(c, name) { return ICONS[name]; },
   // A store button; one whose store isn't there yet is shown disabled, with "Coming soon".

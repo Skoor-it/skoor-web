@@ -8,6 +8,7 @@ export const APP_URL = 'https://app.skoor.it/';
 const FUNCTIONS = 'https://api.skoor.it';
 export const WISH_URL = `${FUNCTIONS}/sportWish`;
 export const NUMBERS_URL = `${FUNCTIONS}/siteNumbers`;
+export const SPORTS_URL = `${FUNCTIONS}/siteSports`;
 
 // The mailing list server (not built yet: the provider is still to be chosen). While null, the
 // "Keep me posted" and "Email me" buttons are disabled and say the list opens soon.

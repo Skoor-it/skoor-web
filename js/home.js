@@ -1,6 +1,7 @@
 // The home page (board 58): the scoreboard to try, the live numbers, the mailing list, and the
 // court at night behind the top.
-import { MAILING_URL, NUMBERS_URL } from './config.js';
+import { MAILING_URL, NUMBERS_URL, SPORTS_URL } from './config.js';
+import { sportCards } from './sports.js';
 import { digits, over, point, start, undo } from './score.js';
 import { lang, number, t, validEmail } from './text.js';
 
@@ -38,6 +39,38 @@ function tryScoreboard() {
   $('[data-undo]', box).addEventListener('click', () => { s = undo(s); show(true); });
   $('[data-reset]', box).addEventListener('click', () => { s = start(); show(false); $('[data-point="0"]', box).focus(); });
   show(false);
+}
+
+// ---------- the sports (skoor-app, functions/sports.js) ----------
+// The page is built with the sports Skoor had then. The server's list puts them in its order with
+// its names, and adds sports that came later; those draw their icon from the server.
+async function sportList() {
+  const box = $('[data-sports]');
+  if (!box) return;
+  try {
+    const r = await fetch(SPORTS_URL, { headers: { accept: 'application/json' } });
+    if (!r.ok) return;
+    const cards = sportCards(await r.json(), lang());
+    if (!cards) return;
+    const built = new Map($$('[data-sport]', box).map((el) => [el.dataset.sport, el]));
+    const wish = $('.sport-wish', box);
+    for (const c of cards) {
+      let el = built.get(c.id);
+      if (!el) {
+        el = document.createElement('div');
+        el.className = 'sport';
+        el.dataset.sport = c.id;
+        el.innerHTML = '<span class="sport-icon"><span class="sport-img" aria-hidden="true"></span></span><span class="sport-words"><span class="sport-name"></span></span>';
+        $('.sport-img', el).style.setProperty('--icon', `url("${c.icon}")`);
+      }
+      $('.sport-name', el).textContent = c.name;
+      box.insertBefore(el, wish);
+      built.delete(c.id);
+    }
+    built.forEach((el) => el.remove()); // a sport the server no longer has
+  } catch {
+    // No answer: the sports the page was built with stay.
+  }
 }
 
 // ---------- the live numbers (skoor-app, functions/site.js) ----------
@@ -125,6 +158,7 @@ async function court() {
 tryScoreboard();
 mailingList();
 liveNumbers();
+sportList();
 // The court comes after the page has been drawn: three.js is the biggest file of the site.
 const drawCourt = () => court().catch(() => {}); // without it, the black background stays
 if (document.readyState === 'complete') drawCourt(); else addEventListener('load', drawCourt, { once: true });

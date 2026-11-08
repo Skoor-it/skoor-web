@@ -64,7 +64,6 @@ function mailingList() {
   const state = { topics: new Set(['news']), lang: lang(), sending: false, error: false };
   const show = () => {
     $$('[data-topic]', form).forEach((b) => b.setAttribute('aria-pressed', String(state.topics.has(b.dataset.topic))));
-    $$('[data-mail-lang]', form).forEach((b) => b.setAttribute('aria-pressed', String(state.lang === b.dataset.mailLang)));
     const ok = validEmail(email.value);
     const reason = !MAILING_URL ? t('js.news.soon') : !ok ? t('js.news.typeEmail') : !state.topics.size ? t('js.news.pickTopic')
       : state.sending ? t('js.news.sending') : state.error ? t('js.news.failed') : t('js.news.ready');
@@ -76,7 +75,10 @@ function mailingList() {
     if (state.topics.has(k)) state.topics.delete(k); else state.topics.add(k);
     show();
   }));
-  $$('[data-mail-lang]', form).forEach((b) => b.addEventListener('click', () => { state.lang = b.dataset.mailLang; show(); }));
+  // The emails' language: a drop-down that starts on the language of the page.
+  const pickLang = $('[data-mail-lang]', form);
+  pickLang.value = state.lang;
+  pickLang.addEventListener('change', () => { state.lang = pickLang.value; show(); });
   email.addEventListener('input', () => { state.error = false; show(); });
   form.addEventListener('submit', async (e) => {
     e.preventDefault();

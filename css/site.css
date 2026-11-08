@@ -235,6 +235,11 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .field-label { font-size: 14px; color: var(--text-4); }
 .input { min-height: 56px; width: 100%; padding: 0 18px; border-radius: 16px; border: 2px solid var(--ink); background: var(--card); color: var(--ink); font: 18px Inter, sans-serif; }
 .input::placeholder { color: #6b6b6b; }
+/* A drop-down that looks like the other fields, with its own arrow. */
+.select-wrap { position: relative; display: block; max-width: 320px; }
+.select-wrap::after { content: ''; position: absolute; right: 20px; top: 50%; width: 9px; height: 9px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+.select { appearance: none; -webkit-appearance: none; padding-right: 52px; cursor: pointer; }
+.select:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
 .input-grow { flex: 1 1 260px; width: auto; min-width: 0; }
 .input-s { min-height: 48px; padding: 0 14px; border-radius: 14px; border: 1px solid var(--line-3); background: #000; font-size: 16px; flex-basis: 220px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }

@@ -263,11 +263,11 @@
           <button type="button" class="chip" data-topic="watch" aria-pressed="false">Watch apps</button>
           <button type="button" class="chip" data-topic="sports" aria-pressed="false">New sports</button>
         </div>
-        <span class="field-label" id="nl-lang">Language</span>
-        <div class="chips" role="group" aria-labelledby="nl-lang">
-          <button type="button" class="chip" data-mail-lang="en" aria-pressed="false">English</button>
-          <button type="button" class="chip" data-mail-lang="nl" aria-pressed="false">Nederlands</button>
-        </div>
+        <label for="nl-lang" class="field-label">Language</label>
+        <span class="select-wrap"><select id="nl-lang" name="lang" class="input select" data-mail-lang>
+          <option value="en">English</option>
+          <option value="nl">Nederlands</option>
+        </select></span>
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
         <button type="submit" class="btn btn-l btn-start" data-news-send disabled>Keep me posted</button>
         <span class="why" data-news-why aria-live="polite"></span>

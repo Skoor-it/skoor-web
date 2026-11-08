@@ -67,7 +67,7 @@ export default {
   'how.3': 'Kijk terug',
   'how.3text': 'Elke wedstrijd wordt bewaard: wie je versloeg, met wie je het vaakst wint, hoe je niveau groeit.',
 
-  'watch.title': 'Hou je handen aan je racket.',
+  'watch.title': 'Hou je ogen op het spel.',
   'watch.text': 'Scoor vanaf je pols op een Garmin- of Wear OS-horloge, met een goedkope bluetooth-afstandsbediening aan het net, of met een tik op je oortjes. Start een wedstrijd gewoon op je horloge, ook basketbal en voetbal met een lopende klok.',
   'watch.live': '● LIVE · GAME 2',
   'watch.liveQ2': '● LIVE · Q2',

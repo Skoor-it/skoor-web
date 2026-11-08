@@ -69,7 +69,7 @@ export default {
   'how.3': 'Look back',
   'how.3text': 'Every game is kept: who you beat, with whom you win most, how your level grows.',
 
-  'watch.title': 'Keep your hands on the racket.',
+  'watch.title': 'Keep your eyes on the game.',
   'watch.text': 'Score from your wrist on a Garmin or Wear OS watch, with a cheap Bluetooth remote clipped to the net, or with a tap on your earbuds. Start a game right on the watch, also basketball and football with a running clock.',
   'watch.live': '● LIVE · GAME 2',
   'watch.liveQ2': '● LIVE · Q2',

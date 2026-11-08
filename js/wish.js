@@ -114,7 +114,8 @@ async function mostWished() {
   try {
     const r = await fetch(NUMBERS_URL, { headers: { accept: 'application/json' } });
     if (!r.ok) throw new Error(String(r.status));
-    const wishes = (await r.json()).wishes ?? [];
+    const { wishes } = await r.json();
+    if (!Array.isArray(wishes)) throw new Error('no list'); // the server couldn't count them this time
     if (!wishes.length) { say(t('js.wish.none')); return; }
     const most = Math.max(...wishes.map((w) => w.count));
     list.innerHTML = wishes.map((w) => `<li>

@@ -3,7 +3,7 @@
 // hit. three.js draws it. With "reduce motion" on, one still picture is drawn.
 import * as T from './vendor/three.module.min.js';
 
-export const SCENES = ['badminton', 'padel', 'tennis', 'tabletennis', 'squash', 'pickleball', 'beachvolleyball', 'volleyball', 'basketball', 'handball', 'rugby', 'football'];
+export { SCENES } from './scenes.js';
 
 export function startCourt(el, id) {
   let renderer;

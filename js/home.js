@@ -2,6 +2,7 @@
 // court at night behind the top.
 import { DEMO_URL, MAILING_URL, NUMBERS_URL, SPORTS_URL } from './config.js';
 import { sportCards } from './sports.js';
+import { sceneOfThisVisit } from './scenes.js';
 import { lang, number, t, validEmail } from './text.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -12,7 +13,7 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 function appInPhone() {
   const frame = $('[data-app-frame]');
   if (!frame) return;
-  const load = () => { if (!frame.src) frame.src = DEMO_URL; };
+  const load = () => { if (!frame.src) frame.src = `${DEMO_URL}&sport=${sceneOfThisVisit()}`; }; // the background's sport
   if (!('IntersectionObserver' in window)) { load(); return; }
   const seen = new IntersectionObserver((entries) => {
     if (entries.some((e) => e.isIntersecting)) { load(); seen.disconnect(); }
@@ -127,9 +128,8 @@ function mailingList() {
 async function court() {
   const canvas = $('[data-court]');
   if (!canvas) return;
-  const { SCENES, startCourt } = await import('./court.js');
-  const asked = new URLSearchParams(location.search).get('court');
-  const id = SCENES.includes(asked) ? asked : SCENES[Math.floor(Math.random() * SCENES.length)];
+  const { startCourt } = await import('./court.js');
+  const id = sceneOfThisVisit();
   $('[data-scene]').textContent = t(`js.court.${id}`);
   startCourt(canvas, id);
 }

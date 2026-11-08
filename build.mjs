@@ -106,7 +106,7 @@ export const PIECES = {
   footer(c) {
     return `<footer class="foot">
   <div class="wrap foot-in">
-    <span class="logo logo-s">SKOOR</span>
+    <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="Skoor" width="71" height="24"></span>
     <span class="foot-slogan">${c.t('foot.slogan')}</span>
     <a href="${c.root}${c.base}#clubs" class="footlink">${c.t('foot.clubs')}</a>
     <span class="footlink footlink-off">${c.t('foot.privacy')} <span class="soon">· ${c.t('foot.soon')}</span></span>

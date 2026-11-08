@@ -1,0 +1,6 @@
+# Cloudflare Pages: addresses on skoor.it that belong to the app (app.skoor.it).
+# The app tells clubs "open skoor.it/link on the TV".
+/link         https://app.skoor.it/link/          302
+/link/*       https://app.skoor.it/link/:splat    302
+/dash         https://app.skoor.it/dash/          302
+/dash/*       https://app.skoor.it/dash/:splat    302

@@ -4,8 +4,13 @@ The website of Skoor (*Play it. Skoor it.*), built from boards 58–64 of the de
 ("Skoor redesign"): the home page, "Your sport isn't here?" and "You're on the list", in English
 (`/`) and Dutch (`/nl/`), on phones and computers.
 
-Plain pages, no framework. The finished pages are in the repository, so any static host can serve
-the folder as it is (GitHub Pages, Firebase Hosting, …).
+Plain pages, no framework. The finished pages are in the repository, so the folder is served as it
+is: on **Cloudflare Pages** (project connected to this repository, branch `main`, no build command,
+output directory `/`), at skoor.it and www.skoor.it. Every push to `main` is published.
+
+The app itself is at **app.skoor.it** (Firebase Hosting, repository `Skoor-it/skoor-app`).
+`_redirects` sends `skoor.it/link` (the TV screens) and `skoor.it/dash` on to the app; `_headers`
+lets browsers keep the fonts and three.js.
 
 ## Change something
 

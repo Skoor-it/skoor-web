@@ -2,7 +2,7 @@
 // A store link that is still null shows its button disabled, with "Coming soon".
 
 // The Skoor app ("Open Skoor", "Start a game", "Open in your browser").
-export const APP_URL = 'https://badminton-dev-bc258.web.app/';
+export const APP_URL = 'https://app.skoor.it/';
 
 // The Skoor servers (skoor-app, functions/).
 const FUNCTIONS = 'https://europe-west1-badminton-dev-bc258.cloudfunctions.net';

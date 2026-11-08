@@ -85,10 +85,9 @@ export const PIECES = {
   tiles(c, size, on, digits) {
     return [...digits].map((d) => `<span class="tile tile-${size}${on === 'on' ? ' tile-on' : ''}">${d}</span>`).join('');
   },
-  sport(c, id, timed) {
-    const rule = c.t(`sports.${id}Rule`);
-    const clock = timed ? `<span class="clock" role="img" aria-label="${c.t('sports.timed')}">${ICONS.clock}</span>` : '';
-    return `<div class="sport"><span class="sport-icon"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">${SPORT_ICONS[id]}</svg></span><span class="sport-words"><span class="sport-name">${c.t(`sports.${id}`)}</span><span class="sport-rule">${clock}${rule}</span></span></div>`;
+  // Only the sport's name: how many points or minutes is chosen when a game starts, so no rule here.
+  sport(c, id) {
+    return `<div class="sport"><span class="sport-icon"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">${SPORT_ICONS[id]}</svg></span><span class="sport-words"><span class="sport-name">${c.t(`sports.${id}`)}</span></span></div>`;
   },
   icon(c, name) { return ICONS[name]; },
   // A store button; one whose store isn't there yet is shown disabled, with "Coming soon".

@@ -83,7 +83,7 @@ export default {
   'watch.remote': 'A camera remote or earbuds',
 
   'clubs.title': 'Clubs and events, made easy.',
-  'clubs.text': 'For club training, tournaments and sports days. Everyone says if they come. Skoor makes fair matches, sends people to free courts, and shows every score on the TV in the hall. At the end of the night, the statistics are already there.',
+  'clubs.text': 'For club training, tournaments and sports days. Players get a reminder in advance to confirm they’re coming. Skoor creates fair matches, matches players to available courts, and shows every score on the TV in the hall. At the end of the night, the statistics are already there.',
   'clubs.coming': 'Who is coming',
   'clubs.comingText': 'A reminder the day before; yes, no or maybe with one tap.',
   'clubs.fair': 'Fair rotation',

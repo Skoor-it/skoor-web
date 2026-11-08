@@ -81,7 +81,7 @@ export default {
   'watch.remote': 'Een camera-afstandsbediening of oortjes',
 
   'clubs.title': 'Clubs en evenementen, eenvoudig geregeld.',
-  'clubs.text': 'Voor clubtrainingen, toernooien en sportdagen. Iedereen laat weten of hij komt. Skoor maakt eerlijke wedstrijden, stuurt mensen naar vrije velden en toont elke score op de tv in de zaal. Op het einde van de avond staan de statistieken al klaar.',
+  'clubs.text': 'Voor clubtrainingen, toernooien en sportdagen. Spelers krijgen vooraf een herinnering om te bevestigen dat ze komen. Skoor maakt eerlijke wedstrijden, deelt spelers in op vrije velden en toont elke score op de tv in de zaal. Op het einde van de avond staan de statistieken al klaar.',
   'clubs.coming': 'Wie komt er',
   'clubs.comingText': 'Een herinnering de dag ervoor; ja, nee of misschien met één tik.',
   'clubs.fair': 'Eerlijke rotatie',

@@ -118,7 +118,7 @@ export default {
   'screens.done': 'Done',
 
   'get.title': 'Your next point<br><span class="green">counts.</span>',
-  'get.text': 'Free for your own games. Clubs pay a small amount per month for evenings, screens and statistics.',
+  'get.text': 'Start for free: your first game takes seconds, no account needed. Running a club or an event? Set it up in a few minutes.',
   'get.browserSmall': 'Right now, no install',
   'get.browser': 'Open in your browser',
   'get.appStoreSmall': 'Download on the',

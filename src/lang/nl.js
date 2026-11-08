@@ -116,7 +116,7 @@ export default {
   'screens.done': 'Klaar',
 
   'get.title': 'Je volgende punt<br><span class="green">telt.</span>',
-  'get.text': 'Gratis voor je eigen wedstrijden. Clubs betalen een klein bedrag per maand voor avonden, schermen en statistieken.',
+  'get.text': 'Begin gratis: je eerste wedstrijd start in enkele seconden, zonder account. Heb je een club of organiseer je een evenement? Je zet het op in een paar minuten.',
   'get.browserSmall': 'Meteen, niets te installeren',
   'get.browser': 'Open in je browser',
   'get.appStoreSmall': 'Download in de',

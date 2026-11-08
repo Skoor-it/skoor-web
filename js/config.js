@@ -4,6 +4,10 @@
 // The Skoor app ("Open Skoor", "Start a game", "Open in your browser").
 export const APP_URL = 'https://app.skoor.it/';
 
+// The real app in demo mode, shown in the phone on the home page: a quick game, nothing stored or
+// sent (skoor-app, alpha/js/demo.js).
+export const DEMO_URL = `${APP_URL}?demo`;
+
 // The Skoor servers (skoor-app, functions/).
 const FUNCTIONS = 'https://api.skoor.it';
 export const WISH_URL = `${FUNCTIONS}/sportWish`;

@@ -22,7 +22,7 @@ lets browsers keep the fonts and three.js.
 | The pages' layout | `src/home.html`, `src/wish.html`, `src/subscribed.html` |
 | Look | `css/site.css` |
 | Addresses: the app, the servers, the stores, the mailing list | `js/config.js` |
-| The scoreboard to try, live numbers, mailing list | `js/home.js`, `js/score.js` |
+| The phone on the home page (the real app in demo mode, `DEMO_URL`), live numbers, mailing list | `js/home.js` |
 | The court at night (three.js) | `js/court.js` |
 | Wishing a sport | `js/wish.js` |
 

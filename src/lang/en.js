@@ -28,16 +28,7 @@ export default {
   'hero.liveNow': 'games being played right now',
   'hero.onCourt': 'Now on court:',
 
-  'try.quick': 'QUICK GAME',
-  'try.to21': 'TO 21',
-  'try.you': 'YOU',
-  'try.them': 'THEM',
-  'try.pointYou': 'Point for you',
-  'try.pointThem': 'Point for them',
-  'try.undo': 'Undo',
-  'try.game': 'GAME',
-  'try.pitch': 'That’s Skoor. Now imagine it on your wrist, with your club, on the TV in the hall.',
-  'try.again': 'Play again',
+  'try.frameTitle': 'Skoor, the real app: tap a side to score',
   'try.label': 'Try it: tap a side to score',
 
   'nums.label': 'Skoor in numbers',
@@ -182,12 +173,6 @@ export default {
   'sub.friends': 'Got friends at the club? Send them skoor.it: the more players, the better your statistics.',
 
   // In the browser
-  'js.hint1': 'First to 21 wins',
-  'js.hint2': 'Green serves',
-  'js.hint3': 'The side that wins the rally serves',
-  'js.youWin': 'YOU WIN',
-  'js.theyWin': 'THEY WIN',
-  'js.scoreSaid': 'You {a}, them {b}',
   'js.court.badminton': 'Badminton',
   'js.court.padel': 'Padel',
   'js.court.tennis': 'Tennis',

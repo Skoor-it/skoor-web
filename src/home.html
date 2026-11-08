@@ -32,31 +32,8 @@
       </div>
 
       <div class="try">
-        <div class="phone" data-try>
-          <div class="try-play" data-playing>
-            <div class="try-top"><span class="green try-mode"><span class="dot dot-s"></span>{{try.quick}}</span><span class="muted">{{try.to21}}</span></div>
-            <button type="button" class="try-side" data-point="0" aria-label="{{try.pointYou}}">
-              <span class="try-name" data-name="0">{{try.you}}</span>
-              <span class="tiles" data-tiles="0">[[tiles xl on 00]]</span>
-            </button>
-            <div class="try-line"></div>
-            <button type="button" class="try-side" data-point="1" aria-label="{{try.pointThem}}">
-              <span class="tiles" data-tiles="1">[[tiles xl off 00]]</span>
-              <span class="try-name" data-name="1">{{try.them}}</span>
-            </button>
-            <div class="try-foot">
-              <button type="button" class="btn-small" data-undo>{{try.undo}}</button>
-              <span class="muted small" data-hint></span>
-            </div>
-            <span class="sr" aria-live="polite" data-said></span>
-          </div>
-          <div class="try-won" data-won hidden>
-            <span class="label muted">{{try.game}}</span>
-            <span class="try-winner" data-winner></span>
-            <span class="try-final" data-final></span>
-            <span class="try-pitch">{{try.pitch}}</span>
-            <button type="button" class="btn btn-m" data-reset>{{try.again}}</button>
-          </div>
+        <div class="phone phone-app">
+          <div class="app-screen"><iframe class="app-frame" data-app-frame title="{{try.frameTitle}}" tabindex="0"></iframe></div>
         </div>
         <span class="muted-2">{{try.label}}</span>
       </div>

@@ -26,16 +26,7 @@ export default {
   'hero.liveNow': 'wedstrijden worden nu gespeeld',
   'hero.onCourt': 'Nu op het veld:',
 
-  'try.quick': 'SNELLE WEDSTRIJD',
-  'try.to21': 'TOT 21',
-  'try.you': 'JIJ',
-  'try.them': 'ZIJ',
-  'try.pointYou': 'Punt voor jou',
-  'try.pointThem': 'Punt voor hen',
-  'try.undo': 'Ongedaan',
-  'try.game': 'GAME',
-  'try.pitch': 'Dat is Skoor. Stel je het nu voor op je pols, met je club, op de tv in de zaal.',
-  'try.again': 'Opnieuw spelen',
+  'try.frameTitle': 'Skoor, de echte app: tik op een kant om te scoren',
   'try.label': 'Probeer het: tik op een kant om te scoren',
 
   'nums.label': 'Skoor in cijfers',
@@ -180,12 +171,6 @@ export default {
   'sub.friends': 'Vrienden in de club? Stuur ze skoor.it: hoe meer spelers, hoe beter je statistieken.',
 
   // In de browser
-  'js.hint1': 'Wie eerst 21 heeft, wint',
-  'js.hint2': 'Groen serveert',
-  'js.hint3': 'Wie de rally wint, serveert',
-  'js.youWin': 'JIJ WINT',
-  'js.theyWin': 'ZIJ WINNEN',
-  'js.scoreSaid': 'Jij {a}, zij {b}',
   'js.court.badminton': 'Badminton',
   'js.court.padel': 'Padel',
   'js.court.tennis': 'Tennis',

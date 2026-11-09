@@ -297,6 +297,10 @@ export function startCourt(el, id) {
     if (el.width !== Math.floor(w * renderer.getPixelRatio()) || el.height !== Math.floor(h * renderer.getPixelRatio())) {
       renderer.setSize(w, h, false);
       camera.aspect = w / Math.max(1, h);
+      // On a narrow (phone) screen the view widens so the whole court still fits across: the
+      // side-to-side view stays as on a square screen, up to 68° top to bottom.
+      const half = Math.atan(Math.tan((20 * Math.PI) / 180) / Math.min(1, camera.aspect));
+      camera.fov = Math.min(68, (2 * half * 180) / Math.PI);
       camera.updateProjectionMatrix();
     }
     let u = (now - t0) / cur.dur;

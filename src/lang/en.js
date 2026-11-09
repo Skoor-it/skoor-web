@@ -219,7 +219,7 @@ export default {
   'prices.eyebrow': 'Prices',
   'prices.title': 'Free to play.<br><span class="green">Pay for more.</span>',
   'prices.text': 'Scoring a game, keeping every result and organising who comes are free, for ever, in every sport. Pay only for what you want on top: statistics for yourself, tools for your group’s evenings, or everything for your club.',
-  'prices.soon': 'Payments open soon. Until then Skoor is free, and the first 500 who pay keep their price for life.',
+  'prices.soon': 'Payments open soon. Until then Skoor is free.',
   'prices.plans': 'The plans',
   'prices.comingSoon': 'Coming soon',
   'prices.why': 'Payments aren’t open yet.',

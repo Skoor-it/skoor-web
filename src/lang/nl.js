@@ -217,7 +217,7 @@ export default {
   'prices.eyebrow': 'Prijzen',
   'prices.title': 'Gratis spelen.<br><span class="green">Betalen voor meer.</span>',
   'prices.text': 'Een wedstrijd scoren, elk resultaat bewaren en regelen wie er komt: voor altijd gratis, in elke sport. Je betaalt alleen voor wat je erbovenop wilt: statistieken voor jezelf, hulp bij de avonden van je groep, of alles voor je club.',
-  'prices.soon': 'Betalen kan binnenkort. Tot dan is Skoor gratis, en de eerste 500 die betalen houden hun prijs voor altijd.',
+  'prices.soon': 'Betalen kan binnenkort. Tot dan is Skoor gratis.',
   'prices.plans': 'De abonnementen',
   'prices.comingSoon': 'Binnenkort',
   'prices.why': 'Betalen kan nog niet.',

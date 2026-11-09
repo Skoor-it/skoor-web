@@ -286,6 +286,28 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .note-l { margin-top: 24px; font-size: 15px; }
 
 /* Phones (board 59: the same page at 390 wide) */
+/* The prices page */
+.prices-main { padding-top: 56px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px; }
+.prices-intro { gap: 20px; }
+.prices-soon { margin: 0; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 16px; background: var(--card-2); border: 1px solid var(--line-2); font-size: 15px; line-height: 1.45; color: var(--text-2); }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+.plan { display: flex; flex-direction: column; gap: 14px; padding: 26px 22px; border-radius: 24px; background: var(--card); border: 1px solid var(--line); }
+.plan-top { display: flex; flex-direction: column; gap: 4px; }
+.plan-name { margin: 0; font-family: var(--title); font-weight: 800; font-size: 34px; line-height: 1; text-transform: uppercase; letter-spacing: .02em; }
+.plan-for { font-size: 14px; line-height: 1.4; color: var(--text-4); }
+.plan-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+.plan-n { font-family: var(--title); font-weight: 800; font-size: 60px; line-height: 1; font-variant-numeric: tabular-nums; }
+.plan-per { font-size: 15px; color: var(--text-3); }
+.plan-note { font-size: 13px; line-height: 1.45; color: var(--text-5); }
+.plan-list { flex: 1; margin: 0; padding: 14px 0 0; border-top: 1px solid var(--line-2); list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.plan-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.45; color: var(--text-2); }
+.plan-list svg { flex: none; margin-top: 1px; }
+.plan-foot { display: flex; flex-direction: column; gap: 8px; }
+.plan-btn { width: 100%; }
+.plan-why { text-align: center; }
+.prices-large { margin-top: 20px; font-size: 14px; }
+.prices-trial { max-width: 760px; }
+
 @media (max-width: 640px) {
   .hero, .hero-inner { min-height: 0; }
   .hero-body { padding-top: 16px; gap: 48px; }

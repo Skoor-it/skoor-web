@@ -222,6 +222,7 @@ export default {
   'prices.comingSoon': 'Binnenkort',
   'prices.why': 'Betalen kan nog niet.',
   'prices.startFree': 'Gratis beginnen',
+  'prices.noCard': 'Geen kaart nodig.',
   'prices.free': 'Gratis',
   'prices.freeFor': 'Voor iedereen',
   'prices.freePrice': '€0',

@@ -114,7 +114,7 @@ export const PIECES = {
     const list = Array.from({ length: Number(items) }, (_, i) => `<li>${ICONS.tick}<span>${k(String(i + 1))}</span></li>`).join('');
     const per = k('Per') ? `<span class="plan-per">${k('Per')}</span>` : '';
     const button = id === 'free'
-      ? `<a href="${APP_URL}" class="btn btn-m plan-btn">${c.t('prices.startFree')}</a>`
+      ? `<a href="${APP_URL}" class="btn btn-m plan-btn">${c.t('prices.startFree')}</a><span class="why plan-why">${c.t('prices.noCard')}</span>`
       : `<button type="button" class="btn btn-m plan-btn" disabled aria-describedby="why-${id}">${c.t('prices.comingSoon')}</button><span class="why plan-why" id="why-${id}">${c.t('prices.why')}</span>`;
     return `<article class="plan" aria-labelledby="plan-${id}">
       <div class="plan-top"><h3 class="plan-name" id="plan-${id}">${k('')}</h3><span class="plan-for">${k('For')}</span></div>

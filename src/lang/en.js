@@ -224,6 +224,7 @@ export default {
   'prices.comingSoon': 'Coming soon',
   'prices.why': 'Payments aren’t open yet.',
   'prices.startFree': 'Start free',
+  'prices.noCard': 'No card needed.',
   'prices.free': 'Free',
   'prices.freeFor': 'For everyone',
   'prices.freePrice': '€0',

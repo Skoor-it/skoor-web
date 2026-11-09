@@ -248,7 +248,7 @@ export default {
   'prices.groupFor': 'For your group, paid by the organiser',
   'prices.groupPrice': '€2',
   'prices.groupPer': '/ place a year',
-  'prices.groupNote': 'At least €12 (6 places). A player who joins later: pro rata.',
+  'prices.groupNote': 'At least €12 (6 places). A new player: first month free, then pro rata.',
   'prices.group1': 'Fair rotation or fair teams, every evening',
   'prices.group2': 'A TV screen at the venue',
   'prices.group3': 'The group’s standings over time, for every player',

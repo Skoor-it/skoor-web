@@ -246,7 +246,7 @@ export default {
   'prices.groupFor': 'Voor je groep, betaald door wie organiseert',
   'prices.groupPrice': '€2',
   'prices.groupPer': '/ plaats per jaar',
-  'prices.groupNote': 'Minstens €12 (6 plaatsen). Wie later bijkomt: naar verhouding.',
+  'prices.groupNote': 'Minstens €12 (6 plaatsen). Een nieuwe speler: eerste maand gratis, daarna naar verhouding.',
   'prices.group1': 'Eerlijke rotatie of eerlijke ploegen, elke avond',
   'prices.group2': 'Een tv-scherm in de zaal',
   'prices.group3': 'Het klassement van de groep door de tijd, voor elke speler',

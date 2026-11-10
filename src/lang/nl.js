@@ -218,6 +218,8 @@ export default {
   'privacy.kicker': 'Privacy',
   'privacy.title': 'Privacy, in gewone woorden',
   'privacy.lead': 'Skoor houdt zo weinig mogelijk bij. Geen naam tenzij je een account maakt, nooit waar je bent, geen reclame en niets dat je volgt op deze website.',
+  'privacy.h0': 'Zonder account',
+  'privacy.p0': 'Je hebt geen account nodig om Skoor te gebruiken. Open de app en score: je wedstrijden blijven op je gsm, ook offline, en Skoor weet niet wie je bent. Alleen zolang <i>Help Skoor beter maken</i> aan staat, wordt elke snelle wedstrijd zonder naam verstuurd (zie hieronder); zet je het uit, dan verlaat er niets je gsm. Voor de horloge-apps, clubs en je resultaten op al je toestellen heb je een gratis account nodig.',
   'privacy.h1': 'Snelle wedstrijden',
   'privacy.p1': 'Zolang <i>Help Skoor beter maken</i> aan staat (in de app: Jij → App), stuurt elke snelle wedstrijd: de sport en de regels, de score en wanneer elk punt viel, de taal en versie van de app, het systeem van je gsm (bijvoorbeeld “iOS 18”) en de tijdzone (een regio zoals “Europe/Brussels”, nooit een plaats). Geen naam, geen account, geen internetadres. Zet je het uit, dan wordt er niets meer gestuurd.',
   'privacy.h2': 'Je account',

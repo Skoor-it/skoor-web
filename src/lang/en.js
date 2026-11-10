@@ -220,6 +220,8 @@ export default {
   'privacy.kicker': 'Privacy',
   'privacy.title': 'Privacy, in plain words',
   'privacy.lead': 'Skoor keeps as little as it can. No name unless you make an account, never where you are, no advertising, and no tracking on this website.',
+  'privacy.h0': 'Without an account',
+  'privacy.p0': 'You don’t need an account to use Skoor. Open the app and score: your games stay on your phone, also offline, and Skoor doesn’t know who you are. Only while <i>Help improve Skoor</i> is on, each quick game is sent without any name (see below); switch it off and nothing leaves your phone. The watch apps, clubs and your results on all your devices need a free account.',
   'privacy.h1': 'Quick games',
   'privacy.p1': 'While <i>Help improve Skoor</i> is on (in the app: You → App), each quick game sends: the sport and its rules, the score and when each point was scored, the language and version of the app, your phone’s system (for example “iOS 18”) and its time zone (a region like “Europe/Brussels”, never a place). No name, no account, no internet address. Switch it off and nothing more is sent.',
   'privacy.h2': 'Your account',

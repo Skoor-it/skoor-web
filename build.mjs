@@ -9,7 +9,7 @@
 //   {{@base}}         the root of this language ('' or 'nl/' after @root)
 //   {{@app}}          the Skoor app (js/config.js)
 //   {{@strings}}      the texts the page's script needs (keys starting with "js.")
-//   [[name args]]     a piece made here: head, langswitch, tiles, sport, icon, store, rating, court, footer
+//   [[name args]]     a piece made here: head, langswitch, tiles, sport, icon, store, rating, court, plan, footer
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -25,6 +25,7 @@ export const PAGES = [
   { src: 'subscribed.html', out: 'subscribed/', index: false }, // only reached from the email
   { src: 'privacy.html', out: 'privacy/' },
   { src: 'terms.html', out: 'terms/' },
+  { src: 'prices.html', out: 'prices/' },
 ];
 const SITE = 'https://skoor.it/';
 
@@ -33,6 +34,7 @@ const ICONS = {
   plus: '<svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   check: '<svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="#22c55e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   star: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill="currentColor"/></svg>',
+  tick: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="#22c55e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   clock: '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M10 2h4"/></g></svg>',
   globe: '<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3 3 3 16 0 19M12 2.5c-3 3-3 16 0 19"/></g></svg>',
   phone: '<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></g></svg>',
@@ -107,12 +109,30 @@ export const PIECES = {
     return `<div class="stat"><span class="stat-n">${RATING.rating}<span class="green star">${ICONS.star}</span></span><span class="stat-l">${from}</span></div>`;
   },
   court(c, n) { return c.t('clubs.court').replace('{n}', n); },
+  // A plan on the prices page: its texts are prices.<id>…; 'free' links to the app, the others wait
+  // for payments and are shown disabled, with the reason (buttons are never hidden).
+  plan(c, id, items) {
+    const k = (s) => c.t(`prices.${id}${s}`);
+    const list = Array.from({ length: Number(items) }, (_, i) => `<li>${ICONS.tick}<span>${k(String(i + 1))}</span></li>`).join('');
+    const per = k('Per') ? `<span class="plan-per">${k('Per')}</span>` : '';
+    const button = id === 'free'
+      ? `<a href="${APP_URL}" class="btn btn-m plan-btn">${c.t('prices.startFree')}</a><span class="why plan-why">${c.t('prices.noCard')}</span>`
+      : `<button type="button" class="btn btn-m plan-btn" disabled aria-describedby="why-${id}">${c.t('prices.comingSoon')}</button><span class="why plan-why" id="why-${id}">${c.t('prices.why')}</span>`;
+    return `<article class="plan" aria-labelledby="plan-${id}">
+      <div class="plan-top"><h3 class="plan-name" id="plan-${id}">${k('')}</h3><span class="plan-for">${k('For')}</span></div>
+      <div class="plan-price"><span class="plan-n">${k('Price')}</span>${per}</div>
+      <span class="plan-note">${k('Note')}</span>
+      <ul class="plan-list">${list}</ul>
+      <div class="plan-foot">${button}</div>
+    </article>`;
+  },
   footer(c) {
     return `<footer class="foot">
   <div class="wrap foot-in">
     <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="Skoor" width="71" height="24"></span>
     <span class="foot-slogan">${c.t('foot.slogan')}</span>
     <a href="${c.root}${c.base}#clubs" class="footlink">${c.t('foot.clubs')}</a>
+    <a href="${c.root}${c.base}prices/" class="footlink">${c.t('foot.prices')}</a>
     <a href="${c.root}${c.base}privacy/" class="footlink">${c.t('foot.privacy')}</a>
     <a href="${c.root}${c.base}terms/" class="footlink">${c.t('foot.terms')}</a>
     <span class="footlink footlink-off">${c.t('foot.contact')} <span class="soon">· ${c.t('foot.soon')}</span></span>

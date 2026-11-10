@@ -74,7 +74,10 @@ function mailingList() {
   const email = $('#nl-email', form);
   const send = $('[data-news-send]', form);
   const why = $('[data-news-why]', form);
-  const state = { topics: new Set(['news']), lang: lang(), sending: false, error: false };
+  // ?topic=plans (from the prices page) picks that topic too: it tells us what people wait for.
+  const asked = new URLSearchParams(location.search).get('topic');
+  const known = $$('[data-topic]', form).map((b) => b.dataset.topic);
+  const state = { topics: new Set(['news', ...(known.includes(asked) ? [asked] : [])]), lang: lang(), sending: false, error: false };
   const show = () => {
     $$('[data-topic]', form).forEach((b) => b.setAttribute('aria-pressed', String(state.topics.has(b.dataset.topic))));
     const ok = validEmail(email.value);

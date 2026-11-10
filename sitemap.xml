@@ -41,4 +41,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/terms/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/terms/"/>
   </url>
+  <url>
+    <loc>https://skoor.it/prices/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/prices/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/prices/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/nl/prices/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/prices/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/prices/"/>
+  </url>
 </urlset>

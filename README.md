@@ -1,7 +1,8 @@
 # skoor.it
 
 The website of Skoor (*Play it. Skoor it.*), built from boards 58–64 of the design board
-("Skoor redesign"): the home page, "Your sport isn't here?" and "You're on the list", in English
+("Skoor redesign") and board 103 (prices): the home page, "Your sport isn't here?", "You're on the list"
+and the prices, in English
 (`/`) and Dutch (`/nl/`), on phones and computers.
 
 Plain pages, no framework. The finished pages are in the repository, so the folder is served as it
@@ -19,7 +20,7 @@ lets browsers keep the fonts and three.js.
 | What | Where |
 |---|---|
 | Texts (English and Dutch, always both) | `src/lang/en.js`, `src/lang/nl.js` |
-| The pages' layout | `src/home.html`, `src/wish.html`, `src/subscribed.html` |
+| The pages' layout | `src/home.html`, `src/wish.html`, `src/subscribed.html`, `src/prices.html` |
 | Look | `css/site.css` |
 | Addresses: the app, the servers, the stores, the mailing list | `js/config.js` |
 | The phone on the home page (the real app in demo mode, `DEMO_URL`), live numbers, mailing list | `js/home.js` |
@@ -27,7 +28,7 @@ lets browsers keep the fonts and three.js.
 | Wishing a sport | `js/wish.js` |
 
 After changing anything in `src/` or `js/config.js`, run `npm run build`: it writes `index.html`,
-`wish/`, `subscribed/` and the same under `nl/`. Then `npm test` (it also checks the built pages
+`wish/`, `subscribed/`, `prices/` and the same under `nl/`. Then `npm test` (it also checks the built pages
 are up to date). `npm start` serves the site at http://localhost:8090.
 
 ## Where the data comes from

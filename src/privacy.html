@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+[[head meta.privacyTitle meta.privacyDescription]]
+</head>
+<body>
+<a class="skip" href="#main">{{nav.skip}}</a>
+<div class="page">
+  <nav aria-label="{{nav.label}}" class="topnav wrap">
+    <a href="{{@base}}" class="logo"><img src="{{@root}}icons/skoor-logo.svg" alt="Skoor" width="83" height="28"></a>
+    [[langswitch]]
+    <a href="{{@app}}" class="btn btn-s">{{nav.open}}</a>
+  </nav>
+  <main id="main" class="wrap legal">
+    <span class="kicker">{{privacy.kicker}}</span>
+    <h1 class="h1 legal-h1">{{privacy.title}}</h1>
+    <p class="legal-lead">{{privacy.lead}}</p>
+      <section class="legal-sec"><h2>{{privacy.h1}}</h2><p>{{privacy.p1}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h2}}</h2><p>{{privacy.p2}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h3}}</h2><p>{{privacy.p3}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h4}}</h2><p>{{privacy.p4}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h5}}</h2><p>{{privacy.p5}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h6}}</h2><p>{{privacy.p6}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h7}}</h2><p>{{privacy.p7}}</p></section>
+      <section class="legal-sec"><h2>{{privacy.h8}}</h2><p>{{privacy.p8}}</p></section>
+    <p class="legal-date">{{legal.changed}}</p>
+  </main>
+  [[footer]]
+</div>
+</body>
+</html>

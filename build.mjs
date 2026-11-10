@@ -23,6 +23,8 @@ export const PAGES = [
   { src: 'home.html', out: '' },
   { src: 'wish.html', out: 'wish/' },
   { src: 'subscribed.html', out: 'subscribed/' },
+  { src: 'privacy.html', out: 'privacy/' },
+  { src: 'terms.html', out: 'terms/' },
 ];
 const SITE = 'https://skoor.it/';
 
@@ -111,7 +113,8 @@ export const PIECES = {
     <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="Skoor" width="71" height="24"></span>
     <span class="foot-slogan">${c.t('foot.slogan')}</span>
     <a href="${c.root}${c.base}#clubs" class="footlink">${c.t('foot.clubs')}</a>
-    <span class="footlink footlink-off">${c.t('foot.privacy')} <span class="soon">· ${c.t('foot.soon')}</span></span>
+    <a href="${c.root}${c.base}privacy/" class="footlink">${c.t('foot.privacy')}</a>
+    <a href="${c.root}${c.base}terms/" class="footlink">${c.t('foot.terms')}</a>
     <span class="footlink footlink-off">${c.t('foot.contact')} <span class="soon">· ${c.t('foot.soon')}</span></span>
     <a href="${c.root}${c.lang === 'en' ? 'nl/' : ''}${c.page.out}" class="footlink" lang="${c.lang === 'en' ? 'nl' : 'en'}">${c.t('nav.otherLang')}</a>
   </div>

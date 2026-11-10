@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Built by build.mjs from its list of pages: run npm run build. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://skoor.it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/nl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/wish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/wish/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/wish/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/nl/wish/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/wish/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/wish/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/nl/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/terms/"/>
+  </url>
+  <url>
+    <loc>https://skoor.it/nl/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skoor.it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://skoor.it/nl/terms/"/>
+  </url>
+</urlset>

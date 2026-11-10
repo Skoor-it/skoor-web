@@ -1,0 +1,5 @@
+# Built by build.mjs: run npm run build.
+User-agent: *
+Allow: /
+
+Sitemap: https://skoor.it/sitemap.xml

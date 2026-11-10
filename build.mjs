@@ -22,7 +22,7 @@ export const LANGS = { en, nl };
 export const PAGES = [
   { src: 'home.html', out: '' },
   { src: 'wish.html', out: 'wish/' },
-  { src: 'subscribed.html', out: 'subscribed/' },
+  { src: 'subscribed.html', out: 'subscribed/', index: false }, // only reached from the email
   { src: 'privacy.html', out: 'privacy/' },
   { src: 'terms.html', out: 'terms/' },
 ];
@@ -147,11 +147,37 @@ export function render(page, lang) {
   return html.replace(/^<!doctype html>\n/i, (d) => `${d}<!-- Built from src/${page.src} by build.mjs: change that file and run npm run build. -->\n`);
 }
 
+// For search engines: every page that may be found, in both languages, each pointing to the other.
+export function sitemap() {
+  const urls = PAGES.filter((p) => p.index !== false).flatMap((p) => ['', 'nl/'].map((base) => {
+    const alt = ['en', 'nl'].map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${SITE}${l === 'en' ? '' : 'nl/'}${p.out}"/>`).join('\n');
+    return `  <url>\n    <loc>${SITE}${base}${p.out}</loc>\n${alt}\n  </url>`;
+  }));
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Built by build.mjs from its list of pages: run npm run build. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls.join('\n')}
+</urlset>
+`;
+}
+
+// Search engines may read every page. The page after the mailing-list email says noindex itself (a
+// Disallow here would hide that from them), so it stays out of the sitemap only.
+export function robots() {
+  return `# Built by build.mjs: run npm run build.
+User-agent: *
+Allow: /
+
+Sitemap: ${SITE}sitemap.xml
+`;
+}
+
 export function outputs() {
   const files = [];
   for (const lang of Object.keys(LANGS)) {
     for (const page of PAGES) files.push({ path: `${lang === 'en' ? '' : 'nl/'}${page.out}index.html`, html: render(page, lang) });
   }
+  files.push({ path: 'sitemap.xml', html: sitemap() }, { path: 'robots.txt', html: robots() });
   return files;
 }
 

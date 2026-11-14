@@ -78,7 +78,7 @@ export const PIECES = {
 <link rel="icon" href="${c.root}icons/skoor-favicon.svg" type="image/svg+xml">
 <link rel="icon" href="${c.root}icons/skoor-favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="${c.root}icons/skoor-apple-180.png">
-<link rel="preload" href="${c.root}fonts/barlow-condensed-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${c.root}fonts/skoor-condensed-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${c.root}css/site.css">`;
   },
   // EN · NL in the menu: the language shown is white, the other one a link to this page in it.

@@ -1,7 +1,7 @@
-/* The website skoor.it (boards 58–64 on the design board). Black, Barlow Condensed for titles and
-   scores, Inter for the rest, green flip tiles. Colours: green = action / serving, white =
+/* The website skoor.it (boards 58–64 on the design board). Black, Skoor Condensed (Barlow
+   Condensed with the slashed zero) for titles and scores, Inter for the rest, green flip tiles. Colours: green = action / serving, white =
    selected, orange = late. */
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('../fonts/barlow-condensed-800-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Skoor Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('../fonts/skoor-condensed-800-latin.woff2') format('woff2'); }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/inter-latin-400-normal.woff2') format('woff2'); }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/inter-latin-600-normal.woff2') format('woff2'); }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/inter-latin-700-normal.woff2') format('woff2'); }
@@ -10,7 +10,7 @@
   --bg: #000; --ink: #fafafa; --green: #22c55e; --green-hover: #4ade80; --green-off: #14532d; --orange: #f59e0b;
   --card: #0f0f0f; --card-2: #0a0a0a; --line: #1f1f1f; --line-2: #262626; --line-3: #3a3a3a; --tile: #1a1a1a;
   --text-2: #c4c4c4; --text-3: #b5b5b5; --text-4: #a3a3a3; --text-5: #8a8a8a;
-  --title: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --title: 'Skoor Condensed', 'Arial Narrow', sans-serif;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }

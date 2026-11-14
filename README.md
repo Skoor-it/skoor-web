@@ -46,5 +46,5 @@ are up to date). `npm start` serves the site at http://localhost:8090.
 - **Stores and rating**: `STORES` and `RATING` in `js/config.js`; a store without a link shows
   "Coming soon".
 
-Fonts (Barlow Condensed, Inter) and three.js are kept here, so the site loads nothing from other
+Fonts (Skoor Condensed, our own Barlow Condensed with the slashed zero; Inter) and three.js are kept here, so the site loads nothing from other
 sites except the Skoor servers.

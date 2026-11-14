@@ -340,3 +340,6 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .prices-noaccount { margin: 0; padding: 18px 20px; border-radius: 16px; background: var(--card); border: 1px solid var(--line-2); font-size: 16px; line-height: 1.5; color: var(--text-2); }
 .prices-noaccount b { color: var(--ink); }
 .prices-soon a, .plan-why a { color: var(--green); }
+
+/* D43: the name SK00R in our own font, so its zeros have the slash like the logo (build.mjs). */
+.sk00r { font-family: var(--title); font-weight: 800; font-size: 1.1em; letter-spacing: .02em; }

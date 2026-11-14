@@ -1,7 +1,7 @@
 # skoor.it
 
-The website of Sk00r (*Play it. Sk00r it.*), built from boards 58–64 of the design board
-("Sk00r redesign") and board 103 (prices): the home page, "Your sport isn't here?", "You're on the list"
+The website of SK00R (*Play it. SK00R it.*), built from boards 58–64 of the design board
+("SK00R redesign") and board 103 (prices): the home page, "Your sport isn't here?", "You're on the list"
 and the prices, in English
 (`/`) and Dutch (`/nl/`), on phones and computers.
 
@@ -33,9 +33,9 @@ are up to date). `npm start` serves the site at http://localhost:8090.
 
 ## Where the data comes from
 
-- **Server address**: everything goes to `api.skoor.it` (a Cloudflare Worker in front of the Sk00r
+- **Server address**: everything goes to `api.skoor.it` (a Cloudflare Worker in front of the SK00R
   server functions, see `cloudflare/api-worker.js` in `Skoor-it/skoor-app`).
-- **Live numbers and "Most wished right now"**: `siteNumbers` in the Sk00r app's server
+- **Live numbers and "Most wished right now"**: `siteNumbers` in the SK00R app's server
   (`Skoor-it/skoor-app`, `functions/site.js`). Totals only, counted once an hour.
 - **Sport wishes**: `sportWish` (`functions/sportwish.js`), the same as in the app.
 - **Mailing list**: not built yet (provider still to choose: Brevo or Laposta). While
@@ -47,4 +47,4 @@ are up to date). `npm start` serves the site at http://localhost:8090.
   "Coming soon".
 
 Fonts (Skoor Condensed, our own Barlow Condensed with the slashed zero; Inter) and three.js are kept here, so the site loads nothing from other
-sites except the Sk00r servers.
+sites except the SK00R servers.

@@ -7,7 +7,7 @@
 //   {{@lang}}         en or nl
 //   {{@root}}         the way back to the site's root folder ('', '../', '../../')
 //   {{@base}}         the root of this language ('' or 'nl/' after @root)
-//   {{@app}}          the Sk00r app (js/config.js)
+//   {{@app}}          the SK00R app (js/config.js)
 //   {{@strings}}      the texts the page's script needs (keys starting with "js.")
 //   [[name args]]     a piece made here: head, langswitch, tiles, sport, icon, store, rating, court, plan, footer
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -130,7 +130,7 @@ export const PIECES = {
   footer(c) {
     return `<footer class="foot">
   <div class="wrap foot-in">
-    <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="Sk00r" width="54" height="24"></span>
+    <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="SK00R" width="54" height="24"></span>
     <span class="foot-slogan">${c.t('foot.slogan')}</span>
     <a href="${c.root}${c.base}#clubs" class="footlink">${c.t('foot.clubs')}</a>
     <a href="${c.root}${c.base}prices/" class="footlink">${c.t('foot.prices')}</a>
@@ -199,7 +199,7 @@ export function outputs() {
     for (const page of PAGES) files.push({ path: `${lang === 'en' ? '' : 'nl/'}${page.out}index.html`, html: render(page, lang) });
   }
   files.push({ path: 'sitemap.xml', html: sitemap() }, { path: 'robots.txt', html: robots() });
-  return files;
+  return files.map((f) => (f.path.endsWith('.html') ? { ...f, html: brandName(f.html) } : f));
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
@@ -208,4 +208,15 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     writeFileSync(join(ROOT, f.path), f.html);
     console.log('built', f.path);
   }
+}
+
+// D43: the name SK00R is shown in our own font (Skoor Condensed), so its zeros have the slash like
+// the logo: wrapped in <span class="sk00r"> in visible text only (not in tags, <title>, <script>,
+// <style> or text already wrapped). Buttons space their parts with a gap, so plain spaces stay.
+export function brandName(html) {
+  const parts = html.split(/(<!--[\s\S]*?-->|<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<title\b[\s\S]*?<\/title>|<[^>]+>)/i);
+  return parts.map((part, i) => {
+    if (i % 2 === 1 || (i > 0 && parts[i - 1].startsWith('<span class="sk00r"'))) return part;
+    return part.replace(/( ?)(?<![\w])SK00R(?![\w])( ?)/g, (m, a, b) => `${a}<span class="sk00r">SK00R</span>${b}`);
+  }).join('');
 }

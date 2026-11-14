@@ -19,7 +19,7 @@ export default {
   'nav.backToSports': 'Terug naar de sporten',
   'nav.otherLang': 'English',
 
-  'hero.title': 'Play it.<br><span class="green">Skoor it.</span>',
+  'hero.title': 'Play it.<br><span class="green"><span aria-hidden="true">Sk00r it.</span><span class="sr-only">Skoor it.</span></span>',
   'hero.lead': 'De score van elk punt, met één tik: op je gsm of je smartwatch. Clubs regelen er hun hele avond mee: wie komt, wie speelt er nu, de score op het scherm in de zaal.',
   'hero.start': 'Start een wedstrijd, gratis',
   'hero.clubs': 'Voor clubs en organisatoren',
@@ -63,8 +63,8 @@ export default {
 
   'watch.title': 'Hou je ogen op het spel.',
   'watch.text': 'Scoor vanaf je pols op een Garmin- of Wear OS-horloge. Start een wedstrijd gewoon op je horloge, ook basketbal en voetbal met een lopende klok.',
-  'watch.live': '● LIVE · GAME 2',
-  'watch.liveQ2': '● LIVE · Q2',
+  'watch.live': 'GAME 2',
+  'watch.liveQ2': 'Q2',
   'watch.home': 'THUIS',
   'watch.away': 'UIT',
   'watch.garmin': 'Garmin',
@@ -81,7 +81,6 @@ export default {
   'clubs.rankings': 'Klassementen en seizoenen',
   'clubs.rankingsText': 'Per avond, per seizoen, per duo.',
   'clubs.tvClub': 'JOUW CLUB · DINSDAG',
-  'clubs.tvLive': '● LIVE',
   'clubs.court': 'VELD {n}',
   'clubs.tvNext': 'VOLGENDE OP VELD 2 · Ann &amp; Koen tegen Tom &amp; Sara',
   'clubs.tvCaption': 'Het scherm in de zaal volgt elk punt, en wisselt van kant als de spelers van kant wisselen.',

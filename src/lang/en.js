@@ -21,7 +21,7 @@ export default {
   'nav.backToSports': 'Back to the sports',
   'nav.otherLang': 'Nederlands',
 
-  'hero.title': 'Play it.<br><span class="green">Skoor it.</span>',
+  'hero.title': 'Play it.<br><span class="green"><span aria-hidden="true">Sk00r it.</span><span class="sr-only">Skoor it.</span></span>',
   'hero.lead': 'The score of every point, with one tap: from your phone or your smartwatch. Clubs run their whole evening with it: who’s coming, who plays next, the score on the screen in the hall.',
   'hero.start': 'Start a game, free',
   'hero.clubs': 'For clubs and organisers',
@@ -65,8 +65,8 @@ export default {
 
   'watch.title': 'Keep your eyes on the game.',
   'watch.text': 'Score from your wrist on a Garmin or Wear OS watch. Start a game right on the watch, also basketball and football with a running clock.',
-  'watch.live': '● LIVE · GAME 2',
-  'watch.liveQ2': '● LIVE · Q2',
+  'watch.live': 'GAME 2',
+  'watch.liveQ2': 'Q2',
   'watch.home': 'HOME',
   'watch.away': 'AWAY',
   'watch.garmin': 'Garmin',
@@ -83,7 +83,6 @@ export default {
   'clubs.rankings': 'Rankings and seasons',
   'clubs.rankingsText': 'Per evening, per season, per pair.',
   'clubs.tvClub': 'YOUR CLUB · TUESDAY',
-  'clubs.tvLive': '● LIVE',
   'clubs.court': 'COURT {n}',
   'clubs.tvNext': 'NEXT ON COURT 2 · Ann &amp; Koen vs Tom &amp; Sara',
   'clubs.tvCaption': 'The screen in the hall follows every point, and swaps sides when the players change ends.',

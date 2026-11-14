@@ -86,11 +86,10 @@
     <figure>
       <div class="watch" aria-hidden="true">
         <span class="watch-live">{{watch.live}}</span>
-        <span class="watch-team green">JORIS &amp; ANN</span>
-        <span class="tiles">[[tiles s on 14]]</span>
-        <span class="watch-line"></span>
-        <span class="tiles">[[tiles s off 11]]</span>
-        <span class="watch-team">MATHIAS &amp; LIES</span>
+        <span class="watch-sides">
+          <span class="watch-col"><span class="watch-dots"><i class="won"></i><i></i></span><span class="watch-team green">JORIS<br>&amp; ANN</span>[[tiles s on 14]]</span>
+          <span class="watch-col"><span class="watch-dots"><i></i><i></i></span><span class="watch-team">MATHIAS<br>&amp; LIES</span>[[tiles s off 11]]</span>
+        </span>
       </div>
       <figcaption>{{watch.garmin}}</figcaption>
     </figure>
@@ -99,8 +98,8 @@
         <span class="watch-live">{{watch.liveQ2}}</span>
         <span class="watch-clock">07:42</span>
         <span class="watch-timed">
-          <span class="watch-col"><span class="watch-team">{{watch.home}}</span><span class="watch-n">48</span></span>
-          <span class="watch-col"><span class="watch-team">{{watch.away}}</span><span class="watch-n">45</span></span>
+          <span class="watch-col"><span class="watch-team">{{watch.home}}</span>[[tiles s off 48]]</span>
+          <span class="watch-col"><span class="watch-team">{{watch.away}}</span>[[tiles s off 45]]</span>
         </span>
       </div>
       <figcaption>{{watch.wear}}</figcaption>
@@ -119,13 +118,17 @@
     </ul>
     <figure class="tv-fig">
       <div class="tv" aria-hidden="true">
-        <div class="tv-top"><span>{{clubs.tvClub}}</span><span class="green">{{clubs.tvLive}}</span></div>
+        <div class="tv-top"><img src="{{@root}}icons/skoor-logo.svg" alt="" class="tv-logo"><span>{{clubs.tvClub}}</span><span></span></div>
         <div class="tv-courts">
-          <div class="tv-court"><span class="tv-label">[[court 1]]</span><span class="tv-team green">JORIS &amp; ANN</span><span class="tiles">[[tiles m on 17]]</span><span class="tiles">[[tiles m off 15]]</span><span class="tv-team">TOM &amp; LIEN</span></div>
-          <span class="tv-sep"></span>
-          <div class="tv-court"><span class="tv-label">[[court 2]]</span><span class="tv-team">MATHIAS</span><span class="tiles">[[tiles m off 09]]</span><span class="tiles">[[tiles m on 11]]</span><span class="tv-team green">LENNART</span></div>
-          <span class="tv-sep"></span>
-          <div class="tv-court"><span class="tv-label">[[court 3]]</span><span class="tv-team green">KOEN &amp; LIES</span><span class="tiles">[[tiles m on 20]]</span><span class="tiles">[[tiles m off 18]]</span><span class="tv-team">SARA &amp; JAN</span></div>
+          <div class="tv-court"><span class="tv-label">[[court 1]]</span>
+            <span class="tv-row"><span class="tv-team green">Joris &amp; Ann</span><span class="tv-past won">21</span>[[tiles m on 17]]</span>
+            <span class="tv-row"><span class="tv-team">Tom &amp; Lien</span><span class="tv-past">15</span>[[tiles m off 15]]</span></div>
+          <div class="tv-court"><span class="tv-label">[[court 2]]</span>
+            <span class="tv-row"><span class="tv-team">Mathias</span>[[tiles m off 09]]</span>
+            <span class="tv-row"><span class="tv-team green">Lennart</span>[[tiles m on 11]]</span></div>
+          <div class="tv-court"><span class="tv-label">[[court 3]]</span>
+            <span class="tv-row"><span class="tv-team green">Koen &amp; Lies</span>[[tiles m on 20]]</span>
+            <span class="tv-row"><span class="tv-team">Sara &amp; Jan</span>[[tiles m off 18]]</span></div>
         </div>
         <div class="tv-next">{{clubs.tvNext}}</div>
       </div>
@@ -141,11 +144,8 @@
       <div class="mock" aria-hidden="true">
         <span class="watch-live">{{watch.live}}</span>
         <div class="mock-score">
-          <span class="mock-team green">JORIS &amp; ANN</span>
-          <span class="tiles">[[tiles l on 14]]</span>
-          <span class="mock-line"></span>
-          <span class="tiles">[[tiles l off 11]]</span>
-          <span class="mock-team">TOM &amp; LIEN</span>
+          <span class="mock-side"><span class="mock-team green">JORIS<br>&amp; ANN</span>[[tiles l on 14]]</span>
+          <span class="mock-side"><span class="mock-team">TOM<br>&amp; LIEN</span>[[tiles l off 11]]</span>
         </div>
       </div>
       <figcaption>{{screens.score}}</figcaption>

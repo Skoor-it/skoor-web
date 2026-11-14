@@ -41,7 +41,7 @@
     </nav>
     <div id="main" class="hero-body wrap">
       <div class="hero-words">
-        <h1 class="hero-title">Play it.<br><span class="green">Skoor it.</span></h1>
+        <h1 class="hero-title">Play it.<br><span class="green"><span aria-hidden="true">Sk00r it.</span><span class="sr-only">Skoor it.</span></span></h1>
         <p class="lead">De score van elk punt, met één tik: op je gsm of je smartwatch. Clubs regelen er hun hele avond mee: wie komt, wie speelt er nu, de score op het scherm in de zaal.</p>
         <div class="row">
           <a href="https://app.skoor.it/" class="btn btn-l">Start een wedstrijd, gratis <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -103,22 +103,21 @@
   <div class="watches">
     <figure>
       <div class="watch" aria-hidden="true">
-        <span class="watch-live">● LIVE · GAME 2</span>
-        <span class="watch-team green">JORIS &amp; ANN</span>
-        <span class="tiles"><span class="tile tile-s tile-on">1</span><span class="tile tile-s tile-on">4</span></span>
-        <span class="watch-line"></span>
-        <span class="tiles"><span class="tile tile-s">1</span><span class="tile tile-s">1</span></span>
-        <span class="watch-team">MATHIAS &amp; LIES</span>
+        <span class="watch-live">GAME 2</span>
+        <span class="watch-sides">
+          <span class="watch-col"><span class="watch-dots"><i class="won"></i><i></i></span><span class="watch-team green">JORIS<br>&amp; ANN</span><span class="sc sc-s sc-on">14</span></span>
+          <span class="watch-col"><span class="watch-dots"><i></i><i></i></span><span class="watch-team">MATHIAS<br>&amp; LIES</span><span class="sc sc-s">11</span></span>
+        </span>
       </div>
       <figcaption>Garmin</figcaption>
     </figure>
     <figure>
       <div class="watch" aria-hidden="true">
-        <span class="watch-live">● LIVE · Q2</span>
+        <span class="watch-live">Q2</span>
         <span class="watch-clock">07:42</span>
         <span class="watch-timed">
-          <span class="watch-col"><span class="watch-team">THUIS</span><span class="watch-n">48</span></span>
-          <span class="watch-col"><span class="watch-team">UIT</span><span class="watch-n">45</span></span>
+          <span class="watch-col"><span class="watch-team">THUIS</span><span class="sc sc-s">48</span></span>
+          <span class="watch-col"><span class="watch-team">UIT</span><span class="sc sc-s">45</span></span>
         </span>
       </div>
       <figcaption>Wear OS</figcaption>
@@ -137,13 +136,17 @@
     </ul>
     <figure class="tv-fig">
       <div class="tv" aria-hidden="true">
-        <div class="tv-top"><span>JOUW CLUB · DINSDAG</span><span class="green">● LIVE</span></div>
+        <div class="tv-top"><img src="../icons/skoor-logo.svg" alt="" class="tv-logo"><span>JOUW CLUB · DINSDAG</span><span></span></div>
         <div class="tv-courts">
-          <div class="tv-court"><span class="tv-label">VELD 1</span><span class="tv-team green">JORIS &amp; ANN</span><span class="tiles"><span class="tile tile-m tile-on">1</span><span class="tile tile-m tile-on">7</span></span><span class="tiles"><span class="tile tile-m">1</span><span class="tile tile-m">5</span></span><span class="tv-team">TOM &amp; LIEN</span></div>
-          <span class="tv-sep"></span>
-          <div class="tv-court"><span class="tv-label">VELD 2</span><span class="tv-team">MATHIAS</span><span class="tiles"><span class="tile tile-m">0</span><span class="tile tile-m">9</span></span><span class="tiles"><span class="tile tile-m tile-on">1</span><span class="tile tile-m tile-on">1</span></span><span class="tv-team green">LENNART</span></div>
-          <span class="tv-sep"></span>
-          <div class="tv-court"><span class="tv-label">VELD 3</span><span class="tv-team green">KOEN &amp; LIES</span><span class="tiles"><span class="tile tile-m tile-on">2</span><span class="tile tile-m tile-on">0</span></span><span class="tiles"><span class="tile tile-m">1</span><span class="tile tile-m">8</span></span><span class="tv-team">SARA &amp; JAN</span></div>
+          <div class="tv-court"><span class="tv-label">VELD 1</span>
+            <span class="tv-row"><span class="tv-team green">Joris &amp; Ann</span><span class="tv-past won">21</span><span class="sc sc-m sc-on">17</span></span>
+            <span class="tv-row"><span class="tv-team">Tom &amp; Lien</span><span class="tv-past">15</span><span class="sc sc-m">15</span></span></div>
+          <div class="tv-court"><span class="tv-label">VELD 2</span>
+            <span class="tv-row"><span class="tv-team">Mathias</span><span class="sc sc-m">9</span></span>
+            <span class="tv-row"><span class="tv-team green">Lennart</span><span class="sc sc-m sc-on">11</span></span></div>
+          <div class="tv-court"><span class="tv-label">VELD 3</span>
+            <span class="tv-row"><span class="tv-team green">Koen &amp; Lies</span><span class="sc sc-m sc-on">20</span></span>
+            <span class="tv-row"><span class="tv-team">Sara &amp; Jan</span><span class="sc sc-m">18</span></span></div>
         </div>
         <div class="tv-next">VOLGENDE OP VELD 2 · Ann &amp; Koen tegen Tom &amp; Sara</div>
       </div>
@@ -157,13 +160,10 @@
   <div class="screens">
     <figure>
       <div class="mock" aria-hidden="true">
-        <span class="watch-live">● LIVE · GAME 2</span>
+        <span class="watch-live">GAME 2</span>
         <div class="mock-score">
-          <span class="mock-team green">JORIS &amp; ANN</span>
-          <span class="tiles"><span class="tile tile-l tile-on">1</span><span class="tile tile-l tile-on">4</span></span>
-          <span class="mock-line"></span>
-          <span class="tiles"><span class="tile tile-l">1</span><span class="tile tile-l">1</span></span>
-          <span class="mock-team">TOM &amp; LIEN</span>
+          <span class="mock-side"><span class="mock-team green">JORIS<br>&amp; ANN</span><span class="sc sc-l sc-on">14</span></span>
+          <span class="mock-side"><span class="mock-team">TOM<br>&amp; LIEN</span><span class="sc sc-l">11</span></span>
         </div>
       </div>
       <figcaption>De score</figcaption>

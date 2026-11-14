@@ -88,9 +88,10 @@ export const PIECES = {
     const [a, b] = c.lang === 'en' ? ['EN', 'NL'] : ['NL', 'EN'];
     return `<a href="${href}" class="langlink" hreflang="${c.lang === 'en' ? 'nl' : 'en'}" lang="${c.lang === 'en' ? 'nl' : 'en'}" aria-label="${label}"><span class="lang-on">${a}</span>&nbsp;·&nbsp;${b}</a>`;
   },
-  // Two flip tiles showing a score of two digits. Sizes: xl (the phone to try), l, m, s.
+  // A score as in the app and on the watches: one big number, green for the side that serves
+  // (on). Sizes: l, m, s. ("07" shows 7.)
   tiles(c, size, on, digits) {
-    return [...digits].map((d) => `<span class="tile tile-${size}${on === 'on' ? ' tile-on' : ''}">${d}</span>`).join('');
+    return `<span class="sc sc-${size}${on === 'on' ? ' sc-on' : ''}">${String(Number(digits))}</span>`;
   },
   // Only the sport's name: how many points or minutes is chosen when a game starts, so no rule here.
   sport(c, id) {

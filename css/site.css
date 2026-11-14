@@ -89,18 +89,14 @@ button { font: inherit; }
 .try { flex: 0 0 300px; display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 0 auto; }
 .phone { width: 300px; height: 600px; border-radius: 46px; border: 2px solid #2f2f2f; background: #000; padding: 26px 18px 20px; display: flex; flex-direction: column; box-shadow: 0 40px 120px rgba(34, 197, 94, .18); }
 
-/* Flip tiles: a digit on a dark tile (green for the side that serves), split in the middle */
-.tiles { display: flex; gap: 8px; transition: transform .08s; }
-.tile { position: relative; display: grid; place-items: center; background: var(--tile); color: var(--ink); font-family: var(--title); font-weight: 800; line-height: 1; }
-.tile::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: #000; }
-.tile-on { background: var(--green); color: #000; }
-.tile-xl { width: 74px; height: 102px; border-radius: 14px; font-size: 84px; }
-.tile-l { width: 51px; height: 72px; border-radius: 10px; font-size: 57px; }
-.tile-m { width: 36px; height: 50px; border-radius: 7px; font-size: 40px; }
-.tile-s { width: 28px; height: 40px; border-radius: 5px; font-size: 32px; }
-.tiles:has(.tile-l) { gap: 7px; }
-.tiles:has(.tile-m) { gap: 6px; }
-.tiles:has(.tile-s) { gap: 5px; }
+/* A score: one big number (green: the side that serves), as in the app and on the watches */
+.tiles { display: flex; transition: transform .08s; }
+.sc { display: block; font-family: var(--title); font-weight: 800; line-height: .85; font-variant-numeric: tabular-nums; color: var(--ink); }
+.sc-on { color: var(--green); }
+.sc-l { font-size: 96px; }
+.sc-m { font-size: 44px; }
+.sc-s { font-size: 46px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Sections */
 .block { padding-top: 120px; display: flex; flex-direction: column; gap: 48px; }
@@ -148,13 +144,16 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .watches { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: 48px; padding: 40px 16px; border-radius: 32px; background: var(--card-2); border: 1px solid #1a1a1a; }
 .watches figure, .screens figure { display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .watch { width: 210px; height: 210px; border-radius: 50%; border: 10px solid #1c1c1c; outline: 2px solid #2a2a2a; background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
-.watch-live { font-size: 10px; font-weight: 700; letter-spacing: .12em; color: var(--green); }
-.watch-team { font-size: 10px; font-weight: 700; }
-.watch-line { width: 70px; height: 1px; background: var(--line-2); }
-.watch-clock { font-family: var(--title); font-weight: 800; font-size: 44px; line-height: 1; }
-.watch-timed { display: flex; gap: 10px; align-items: center; }
-.watch-col { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.watch-n { font-family: var(--title); font-weight: 800; font-size: 30px; padding: 0 8px; border-radius: 8px; background: var(--tile); }
+.watch-live { font-family: var(--title); font-weight: 800; font-size: 12px; letter-spacing: .14em; color: var(--text-5); }
+.watch-team { font-family: var(--title); font-weight: 800; font-size: 11px; letter-spacing: .06em; line-height: 1.1; text-align: center; color: var(--text-5); }
+.watch-team.green { color: var(--green); }
+.watch-sides { display: flex; gap: 14px; align-items: flex-end; }
+.watch-dots { display: flex; gap: 4px; }
+.watch-dots i { width: 5px; height: 5px; border-radius: 50%; background: #333; }
+.watch-dots i.won { background: var(--ink); }
+.watch-clock { font-family: var(--title); font-weight: 800; font-size: 44px; line-height: 1; color: var(--green); }
+.watch-timed { display: flex; gap: 22px; align-items: center; }
+.watch-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 
 .clubs { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
 .ticks { flex: 1 1 340px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 22px; }
@@ -165,21 +164,26 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .tick { margin-top: 7px; width: 10px; height: 10px; border-radius: 3px; background: var(--green); flex: none; }
 .tv-fig { flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
 .tv { aspect-ratio: 16 / 9; border-radius: 18px; border: 10px solid #161616; outline: 2px solid #2a2a2a; background: #000; display: flex; flex-direction: column; overflow: hidden; }
-.tv-top { display: flex; justify-content: space-between; gap: 8px; padding: 14px 20px; font-size: 13px; font-weight: 700; letter-spacing: .1em; }
-.tv-courts { flex: 1; display: flex; }
-.tv-court { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 8px; }
-.tv-label { font-size: 12px; font-weight: 700; letter-spacing: .14em; color: var(--text-5); }
-.tv-team { font-size: 13px; font-weight: 700; text-align: center; }
-.tv-sep { width: 1px; background: var(--line); }
+.tv-top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; padding: 14px 20px; font-family: var(--title); font-weight: 800; font-size: 16px; letter-spacing: .1em; }
+.tv-logo { height: 16px; width: auto; }
+.tv-courts { flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0 14px 14px; align-content: start; }
+.tv-court { min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; border-radius: 12px; background: #1a1a1a; border: 1px solid #262626; }
+.tv-row { display: flex; align-items: center; gap: 8px; }
+.tv-past { font-family: var(--title); font-weight: 800; font-size: 18px; color: #5a5a5a; }
+.tv-past.won { color: var(--ink); }
+.tv-label { font-family: var(--title); font-weight: 800; font-size: 12px; letter-spacing: .14em; color: var(--text-5); }
+.tv-team { flex: 1; min-width: 0; font-size: 14px; font-weight: 600; color: var(--text-5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tv-team.green { color: var(--green); }
 .tv-next { padding: 10px 20px; font-size: 13px; color: var(--text-4); border-top: 1px solid var(--line); }
 
 .screens { display: flex; gap: 28px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; }
 .screens figure { scroll-snap-align: start; }
 .mock { width: 260px; height: 540px; border-radius: 40px; border: 2px solid #2a2a2a; background: #000; padding: 22px 16px; display: flex; flex-direction: column; overflow: hidden; }
 .mock .watch-live { font-size: 11px; }
-.mock-score { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
-.mock-team { font-size: 13px; font-weight: 700; }
-.mock-line { width: 120px; height: 1px; background: var(--line-2); }
+.mock-score { flex: 1; display: flex; align-items: center; justify-content: space-around; }
+.mock-side { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.mock-team { font-family: var(--title); font-weight: 800; font-size: 15px; letter-spacing: .06em; line-height: 1.1; text-align: center; color: var(--text-5); }
+.mock-team.green { color: var(--green); }
 .mock-title { font-family: var(--title); font-weight: 800; font-size: 26px; }
 .mock-sub { font-size: 13px; color: var(--text-4); margin: 4px 0 14px; }
 .mock-list { display: flex; flex-direction: column; gap: 8px; }
@@ -315,10 +319,10 @@ figcaption { font-size: 14px; color: var(--text-4); }
   .store { min-width: 0; width: 100%; }
   .tv { aspect-ratio: auto; }
   .tv-top, .tv-next { padding-left: 12px; padding-right: 12px; font-size: 11px; }
-  .tv-court { padding: 12px 4px; gap: 6px; }
-  .tv .tile-m { width: 22px; height: 32px; font-size: 26px; border-radius: 5px; }
-  .tv .tiles { gap: 3px; }
-  .tv-team, .tv-label { font-size: 9px; }
+  .tv-courts { gap: 6px; padding: 0 8px 8px; }
+  .tv-court { padding: 6px 8px; gap: 4px; border-radius: 8px; }
+  .tv .sc-m { font-size: 26px; }
+  .tv-team, .tv-label, .tv-past { font-size: 9px; }
 }
 
 /* Privacy and terms: one column of plain text. */

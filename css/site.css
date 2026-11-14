@@ -169,7 +169,8 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .tv-courts { flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0 14px 14px; align-content: start; }
 .tv-court { min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; border-radius: 12px; background: #1a1a1a; border: 1px solid #262626; }
 .tv-row { display: flex; align-items: center; gap: 8px; }
-.tv-past { font-family: var(--title); font-weight: 800; font-size: 18px; color: #5a5a5a; }
+.tv-past { width: 1.4em; text-align: right; font-family: var(--title); font-weight: 800; font-size: 26px; color: #5a5a5a; }
+.tv .sc-m { width: 1.4em; text-align: right; font-size: 26px; line-height: 1; } /* every game the same size (board 28) */
 .tv-past.won { color: var(--ink); }
 .tv-label { font-family: var(--title); font-weight: 800; font-size: 12px; letter-spacing: .14em; color: var(--text-5); }
 .tv-team { flex: 1; min-width: 0; font-size: 14px; font-weight: 600; color: var(--text-5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -321,8 +322,8 @@ figcaption { font-size: 14px; color: var(--text-4); }
   .tv-top, .tv-next { padding-left: 12px; padding-right: 12px; font-size: 11px; }
   .tv-courts { gap: 6px; padding: 0 8px 8px; }
   .tv-court { padding: 6px 8px; gap: 4px; border-radius: 8px; }
-  .tv .sc-m { font-size: 26px; }
-  .tv-team, .tv-label, .tv-past { font-size: 9px; }
+  .tv .sc-m, .tv-past { font-size: 14px; }
+  .tv-team, .tv-label { font-size: 9px; }
 }
 
 /* Privacy and terms: one column of plain text. */

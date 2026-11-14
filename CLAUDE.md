@@ -1,7 +1,8 @@
 # skoor-web: the website skoor.it
 
-**The name is always written SK00R: capitals, two zeros, shown in our own font (Skoor Condensed) so
-the zeros have the slash, like the logo. Never Skoor, Sk00r or SKOOR** (D43, hard rule): every text,
+**The name is always written SK00R: capitals, two zeros, the zeros always slashed like the logo
+(titles: Skoor Condensed; running text: the normal font and weight, only the zeros slashed). Never
+Skoor, Sk00r or SKOOR** (D43, hard rule): every text,
 title, alt text and e-mail. Only the domain skoor.it, e-mail addresses, the font name "Skoor Condensed",
 file names and the screen-reader-only text of the slogan keep the old spelling.
 

@@ -341,5 +341,11 @@ figcaption { font-size: 14px; color: var(--text-4); }
 .prices-noaccount b { color: var(--ink); }
 .prices-soon a, .plan-why a { color: var(--green); }
 
-/* D43: the name SK00R in our own font, so its zeros have the slash like the logo (build.mjs). */
-.sk00r { font-family: var(--title); font-weight: 800; font-size: 1.1em; letter-spacing: .02em; }
+/* D43: the name SK00R with slashed zeros like the logo, in the weight of the text around it: in
+   running text only its zeros come from 'SK00R Zero' (Inter's own slashed zero, OFL); in titles,
+   which use Skoor Condensed, it simply inherits. Wrapped by build.mjs. */
+@font-face { font-family: 'SK00R Zero'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/sk00r-zero-400.woff2') format('woff2'); unicode-range: U+0030; }
+@font-face { font-family: 'SK00R Zero'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/sk00r-zero-600.woff2') format('woff2'); unicode-range: U+0030; }
+@font-face { font-family: 'SK00R Zero'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/sk00r-zero-700.woff2') format('woff2'); unicode-range: U+0030; }
+.sk00r { font-family: 'SK00R Zero', Inter, system-ui, sans-serif; }
+:is(.logo, .hero-title, .sc, .h1, .h2, .h3, .stat-n, .sport-name, .step-n, .watch-live, .watch-team, .watch-clock, .tv-top, .tv-past, .tv-label, .mock-team, .mock-title, .mock-pair b, .mock-winners, .mock-result, .wish-list-title, .plan-name, .plan-n) .sk00r { font-family: inherit; }

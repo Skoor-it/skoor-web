@@ -7,7 +7,7 @@
 //   {{@lang}}         en or nl
 //   {{@root}}         the way back to the site's root folder ('', '../', '../../')
 //   {{@base}}         the root of this language ('' or 'nl/' after @root)
-//   {{@app}}          the Skoor app (js/config.js)
+//   {{@app}}          the Sk00r app (js/config.js)
 //   {{@strings}}      the texts the page's script needs (keys starting with "js.")
 //   [[name args]]     a piece made here: head, langswitch, tiles, sport, icon, store, rating, court, plan, footer
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -130,7 +130,7 @@ export const PIECES = {
   footer(c) {
     return `<footer class="foot">
   <div class="wrap foot-in">
-    <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="Skoor" width="54" height="24"></span>
+    <span class="logo logo-s"><img src="${c.root}icons/skoor-logo.svg" alt="Sk00r" width="54" height="24"></span>
     <span class="foot-slogan">${c.t('foot.slogan')}</span>
     <a href="${c.root}${c.base}#clubs" class="footlink">${c.t('foot.clubs')}</a>
     <a href="${c.root}${c.base}prices/" class="footlink">${c.t('foot.prices')}</a>

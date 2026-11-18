@@ -232,7 +232,7 @@ export default {
   'privacy.h6': 'Wie de gegevens verwerkt',
   'privacy.p6': 'Accounts, clubs en scores worden bewaard door Google Firebase. De website en de app worden aangeboden via Cloudflare. Zij verwerken de gegevens alleen voor SK00R; we verkopen ze nooit en delen ze niet voor reclame.',
   'privacy.h7': 'Wissen en je rechten',
-  'privacy.p7': 'Schrijf naar <a href="mailto:hello@skoor.it">hello@skoor.it</a> om in te zien, te verbeteren of te wissen wat SK00R over je bijhoudt; we antwoorden binnen een maand. Als je account gewist wordt, verdwijnen je naam, e-mailadres en profiel. Gegevens van snelle wedstrijden zonder naam worden 24 maanden na de wedstrijd gewist.',
+  'privacy.p7': 'In de app, bij Jij → Je gegevens, download je een kopie van alles wat SK00R over je bijhoudt (één keer per dag) en verwijder je zelf je account. Dan verdwijnen je aanmelding, naam, e-mailadres, profiel, horloges en feedback; wedstrijden die je speelde blijven voor de andere spelers als “Verwijderde speler”, zonder iets dat naar jou leidt. Je kunt ook schrijven naar <a href="mailto:hello@skoor.it">hello@skoor.it</a> om je gegevens in te zien, te verbeteren of te wissen; we antwoorden binnen een maand. Gegevens van snelle wedstrijden zonder naam worden 24 maanden na de wedstrijd gewist.',
   'privacy.h8': 'Wie we zijn',
   'privacy.p8': 'SK00R, gemaakt in België. Vragen over je gegevens: <a href="mailto:hello@skoor.it">hello@skoor.it</a>. Je kunt ook klacht indienen bij de Gegevensbeschermingsautoriteit (gegevensbeschermingsautoriteit.be).',
   'terms.kicker': 'Gebruiksvoorwaarden',

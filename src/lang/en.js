@@ -234,7 +234,7 @@ export default {
   'privacy.h6': 'Who handles the data',
   'privacy.p6': 'Accounts, clubs and scores are stored by Google Firebase. The website and the app are served by Cloudflare. They only process the data for SK00R; we never sell it or share it for advertising.',
   'privacy.h7': 'Deleting and your rights',
-  'privacy.p7': 'Write to <a href="mailto:hello@skoor.it">hello@skoor.it</a> to see, correct or delete what SK00R keeps about you; we answer within a month. Deleting your account removes your name, email and profile. Quick-game records without a name are deleted 24 months after the game.',
+  'privacy.p7': 'In the app, under You → Your data, you can download a copy of everything SK00R keeps about you (once a day) and delete your account yourself. Deleting it removes your sign-in, name, email, profile, watches and feedback; matches you played stay for the other players as “Deleted player”, without anything that leads back to you. You can also write to <a href="mailto:hello@skoor.it">hello@skoor.it</a> to see, correct or delete your data; we answer within a month. Quick-game records without a name are deleted 24 months after the game.',
   'privacy.h8': 'Who we are',
   'privacy.p8': 'SK00R, made in Belgium. Questions about your data: <a href="mailto:hello@skoor.it">hello@skoor.it</a>. You may also complain to the Belgian Data Protection Authority (dataprotectionauthority.be).',
   'terms.kicker': 'Terms of use',

@@ -4,13 +4,13 @@ import { sportCards } from '../js/sports.js';
 
 const icon = (id) => `https://api.skoor.it/siteSports/${id}.svg`;
 
-test('the server\'s sports become cards, in its order and the page\'s language', () => {
+test('the server\'s sports become cards, A to Z in the page\'s language', () => {
   const answer = { sports: [
     { id: 'padel', name: { en: 'Padel', nl: 'Padel' }, kind: 'points', icon: icon('padel') },
     { id: 'handball', name: { en: 'Handball', nl: 'Handbal' }, kind: 'timed', icon: icon('handball') },
     { id: 'curling', name: { en: 'Curling' }, kind: 'points', icon: icon('curling') },
   ] };
-  assert.deepEqual(sportCards(answer, 'nl').map((c) => c.name), ['Padel', 'Handbal', 'Curling']);
+  assert.deepEqual(sportCards(answer, 'nl').map((c) => c.name), ['Curling', 'Handbal', 'Padel']);
   assert.deepEqual(sportCards(answer, 'en')[1], { id: 'handball', name: 'Handball', icon: icon('handball') });
 });
 

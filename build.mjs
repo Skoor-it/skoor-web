@@ -9,7 +9,7 @@
 //   {{@base}}         the root of this language ('' or 'nl/' after @root)
 //   {{@app}}          the SK00R app (js/config.js)
 //   {{@strings}}      the texts the page's script needs (keys starting with "js.")
-//   [[name args]]     a piece made here: head, langswitch, tiles, sport, icon, store, rating, court, plan, footer
+//   [[name args]]     a piece made here: head, langswitch, tiles, sport, sports, icon, store, rating, court, plan, footer
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -92,6 +92,11 @@ export const PIECES = {
   // (on). Sizes: l, m, s. ("07" shows 7.)
   tiles(c, size, on, digits) {
     return `<span class="sc sc-${size}${on === 'on' ? ' sc-on' : ''}">${String(Number(digits))}</span>`;
+  },
+  // Every sport, A to Z by its name in the page's language (as in the app, D46).
+  sports(c) {
+    return Object.keys(SPORT_ICONS).sort((a, b) => c.t(`sports.${a}`).localeCompare(c.t(`sports.${b}`), c.lang, { sensitivity: 'base' }))
+      .map((id) => PIECES.sport(c, id)).join('\n    ');
   },
   // Only the sport's name: how many points or minutes is chosen when a game starts, so no rule here.
   sport(c, id) {

@@ -5,8 +5,8 @@
 // Only icons from Skoor's own server; anything else is left out.
 const ICON = /^https:\/\/api\.skoor\.it\/siteSports\/[a-z]{2,20}\.svg$/;
 
-// The server's answer as plain cards ({ id, name, icon }), in its order; null when it isn't a
-// usable list (then the page keeps the sports it was built with).
+// The server's answer as plain cards ({ id, name, icon }), A to Z by the name in the page's language
+// (as in the app, D46); null when it isn't a usable list (then the page keeps the sports it was built with).
 export function sportCards(answer, lang = 'en') {
   const list = Array.isArray(answer?.sports) ? answer.sports : null;
   if (!list?.length) return null;
@@ -16,5 +16,6 @@ export function sportCards(answer, lang = 'en') {
       const name = s.name?.[lang] ?? s.name?.en;
       return { id: s.id, name: typeof name === 'string' && name.trim() ? name.trim().slice(0, 40) : s.id, icon: s.icon };
     });
+  cards.sort((a, b) => a.name.localeCompare(b.name, lang, { sensitivity: 'base' }));
   return cards.length ? cards : null;
 }
